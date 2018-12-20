@@ -1,7 +1,10 @@
 from flask import Flask, redirect, url_for, request, render_template,session
 import os,json
 import DbClasses
-from settings import sessionRepo,create_session
+import TravellorsEngine
+import BookingEngine
+from settings import create_session
+
 
 
 app = Flask(__name__)
@@ -33,20 +36,16 @@ def get_json():
 
 
 @app.route('/travellors', methods=["POST"])   #Reddy this is your routing
-def get_json():
+def travellors():
     jsonData = request.get_json()
-
-    response = json.dumps()
+    response=TravellorsEngine.insert_travellors_details(jsonData)
     return response
 
 
-
-
 @app.route('/bookings', methods=["POST"])
-def get_json():
+def bookings():
     jsonData = request.get_json()
-
-    response = json.dumps()
+    response = BookingEngine.booking_Repository_details(jsonData)
     return response
 
 
