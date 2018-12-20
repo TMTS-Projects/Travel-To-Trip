@@ -38,7 +38,7 @@ def get_json():
 @app.route('/travellors', methods=["POST"])   #Reddy this is your routing
 def travellors():
     jsonData = request.get_json()
-    response=TravellorsEngine.insert_travellors_details(jsonData)
+    response=TravellorsEngine.insert_traveller_details(jsonData)
     return response
 
 

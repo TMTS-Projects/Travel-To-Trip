@@ -1,7 +1,7 @@
 import DbClasses
 from settings import sessionRepo,create_session
 
-def insert_travellors_details(json_data):
+def insert_traveller_details(json_data):
 
     session=sessionRepo()
     user= DbClasses.user_Repository()
