@@ -1,5 +1,6 @@
 from settings import Base
-from sqlalchemy import Column, Integer, String, Boolean, Date
+from sqlalchemy import Column, Integer, String, Boolean, Date, ForeignKey
+
 
 class type_Repository(Base):
     __tablename__ = 'tbl_app_type_m'
@@ -10,12 +11,13 @@ class menus_Repository(Base):
     __tablename__ = 'tbl_app_menu_m'
     menu_id= Column("menu_id",Integer, primary_key=True)
     menu_name= Column("menu_name",String)
-    address= Column("place_address", String)
+    place_address= Column("place_address", String)
     city = Column("city", String)
     state = Column("state", String)
     country = Column("country", String)
     pin_code = Column("pin_code", Integer)
     type_id = Column("type_id", Integer)
+
 
 class user_Repository(Base):
     __tablename__ = 'tbl_app_user_m'
@@ -26,7 +28,7 @@ class user_Repository(Base):
     email_id= Column("email_id",String)
     mobile_number= Column("mobile_number",Integer)
     password= Column("password",String)
-    initial= Column("is_guest",Boolean)
+    is_guest= Column("is_guest",Boolean)
 
 
 class room_Repository(Base):
