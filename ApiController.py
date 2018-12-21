@@ -33,8 +33,6 @@ def get_json():
     return response
 
 
-
-
 @app.route('/travellors', methods=["POST"])   #Reddy this is your routing
 def travellors():
     jsonData = request.get_json()
