@@ -32,12 +32,6 @@ def get_json():
     response = json.dumps()
     return response
 
-
-
-
-
-
-
 @app.route('/travellors', methods=["POST"])   #Reddy this is your routing
 def travellors():
     jsonData = request.get_json()
@@ -49,10 +43,6 @@ def bookings():
     jsonData = request.get_json()
     response = BookingEngine.booking_Repository_details(jsonData)
     return response
-
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
