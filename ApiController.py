@@ -34,6 +34,12 @@ def LogOut():
     return render_template('')
 
 
+
+@app.route('/')
+def LogOut():
+    return render_template('')
+
+
 @app.route('/menus', methods=["POST"])
 def get_json():
     jsonData = request.get_json()
