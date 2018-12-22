@@ -16,3 +16,14 @@ def sessionRepo():
 def create_session(key,value):
     Session = session[key, value]
     return Session
+
+
+def BaseEntitySet(flag,message):
+    jsonData = dict()
+    jsonData["Isfailure"] = flag
+    jsonData["message"] = message
+    if flag == True:
+        print(jsonData["message"])
+    return jsonData["message"]
+
+

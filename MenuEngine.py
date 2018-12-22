@@ -1,5 +1,5 @@
 import DbClasses
-from settings import sessionRepo
+from settings import sessionRepo,BaseEntitySet
 from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 
@@ -9,7 +9,7 @@ def get_menus(typeId):
     menuList = list()
     try:
         session=sessionRepo()
-        db = session.query(DbClasses.menus_Repository,DbClasses.menuRoom_Repository,DbClasses.room_Repository).from_statement(text('''select room.id,app_room.room_id,menu.menu_id,
+        db_result = session.query(DbClasses.menus_Repository,DbClasses.menuRoom_Repository,DbClasses.room_Repository).from_statement(text('''select room.id,app_room.room_id,menu.menu_id,
                                                                                 menu.menu_name,menu.place_address,menu.city,menu.state,menu.country,
                                                                                 app_room.room_name,room.cost,room.amenities,room.room_info 
                                                                                 from tbl_app_menu_m as menu INNER JOIN tbl_menu_room_t as room
@@ -17,12 +17,11 @@ def get_menus(typeId):
                                                                                 INNER JOIN tbl_app_room_m as app_room
                                                                                 ON app_room.room_id = room.room_id 
                                                                                 where menu.type_id = :id''')).params(id=typeId).all()
+        if db_result is None:
+            response = BaseEntitySet(True, "Menu list not fetched from MenuRepository")
+            return response
 
-    except SQLAlchemyError as error:
-        print(error)
-
-    else:
-        for value in db:
+        for value in db_result:
             menu_json = {
                             "id" : value.menus_Repository.menu_id,
                             "name": value.menus_Repository.menu_name,
@@ -36,8 +35,17 @@ def get_menus(typeId):
                             "info" : value.menuRoom_Repository.room_info
                         }
             menuList.append(menu_json)
-
+        BaseEntitySet(False, "Menu list fetched from MenuRepository")
         return menuList
+
+
+
+    except SQLAlchemyError as error:
+        print(error)
+        BaseEntitySet(True, "Menu list not fetched from MenuRepository")
+
+
+
 
 
 
@@ -46,7 +54,7 @@ def get_single_menu_details(menuId):
     menuList = list()
     try:
         session = sessionRepo()
-        db = session.query(DbClasses.menus_Repository, DbClasses.menuRoom_Repository,
+        db_result = session.query(DbClasses.menus_Repository, DbClasses.menuRoom_Repository,
                            DbClasses.room_Repository).from_statement(text('''select room.id,app_room.room_id,menu.menu_id,
                                                                                     menu.menu_name,menu.place_address,menu.city,menu.state,menu.country,
                                                                                     app_room.room_name,room.cost,room.amenities,room.room_info 
@@ -55,13 +63,13 @@ def get_single_menu_details(menuId):
                                                                                     INNER JOIN tbl_app_room_m as app_room
                                                                                     ON app_room.room_id = room.room_id 
                                                                                     where menu.menu_id = :id''')).params(id=menuId).all()
+        if db_result is None:
+            response = BaseEntitySet(True, "Selected Menu list is not fetched from MenuRepository")
+            return response
 
-    except SQLAlchemyError as error:
-        print(error)
-
-    else:
-        for value in db:
+        for value in db_result:
             menu_json = {
+                "id": value.menus_Repository.menu_id,
                 "name": value.menus_Repository.menu_name,
                 "address": value.menus_Repository.place_address,
                 "city": value.menus_Repository.city,
@@ -73,6 +81,11 @@ def get_single_menu_details(menuId):
                 "info": value.menuRoom_Repository.room_info
             }
             menuList.append(menu_json)
-
+        BaseEntitySet(False, "Selected Menu list fetched from MenuRepository")
         return menuList
+
+
+    except SQLAlchemyError as error:
+        print(error)
+        BaseEntitySet(True, "Selected Menu list is not fetched from MenuRepository")
 
