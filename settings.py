@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from flask import session
 
-engine = create_engine('mysql+pymysql://sa:TMTSserver@31@3.80.153.197:9000/travel_to_trip', echo=True)
+engine = create_engine('mysql+pymysql://sa:TMTSserver@31@3.82.153.226:9000/travel_to_trip', echo=True)
 Base = declarative_base()
 
 def sessionRepo():
@@ -13,9 +13,8 @@ def sessionRepo():
     return session
 
 
-def create_session(key,value):
-    Session = session[key, value]
-    return Session
+def create_session(key, value):
+    session[key] = value
 
 
 def BaseEntitySet(flag,message):

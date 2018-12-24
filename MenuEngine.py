@@ -1,6 +1,6 @@
 import DbClasses
 from settings import sessionRepo,BaseEntitySet
-from sqlalchemy import text
+from sqlalchemy import text, or_
 from sqlalchemy.exc import SQLAlchemyError
 
 
@@ -8,7 +8,7 @@ from sqlalchemy.exc import SQLAlchemyError
 def get_menus(typeId):
     menuList = list()
     try:
-        session=sessionRepo()
+        session = sessionRepo()
         db_result = session.query(DbClasses.menus_Repository,DbClasses.menuRoom_Repository,DbClasses.room_Repository).from_statement(text('''select room.id,app_room.room_id,menu.menu_id,
                                                                                 menu.menu_name,menu.place_address,menu.city,menu.state,menu.country,
                                                                                 app_room.room_name,room.cost,room.amenities,room.room_info 
@@ -45,9 +45,19 @@ def get_menus(typeId):
         BaseEntitySet(True, "Menu list not fetched from MenuRepository")
 
 
+#This function is used for fetching the list from the db
+def getMenuList(input):
+    menuLists = list()
+    session = sessionRepo()
+    db_result = session.query(DbClasses.menus_Repository).with_entities(DbClasses.menus_Repository.menu_name,DbClasses.menus_Repository.city).filter(or_(DbClasses.menus_Repository.city.ilike("%"+input+"%"),DbClasses.menus_Repository.menu_name.ilike("%"+input+"%"))).all()
 
-
-
+    menu_json = {
+        "name": [],
+    }
+    for value in db_result:
+        menu_json["name"].append(value.menu_name)
+    menuLists = menu_json
+    return menuLists
 
 # This function is to obtain details of the selected Hotels or Reseorts. ie single menu details
 def get_single_menu_details(menuId):
