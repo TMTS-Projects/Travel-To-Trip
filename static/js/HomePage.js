@@ -16,16 +16,8 @@ send_json('POST','/menus',json);
 
 function get_search_result(){
 var input_id = localStorage.getItem("typeId");
-var text_id = "text_search_" + input_id;
-var checkin_id = "checkin_" + input_id;
-var checkout_id = "checkout_" + input_id;
-var rooms_id = "rooms_" + input_id;
-var search_json = JSON.stringify( { "input" : document.getElementById(text_id).value,
-                                   "checkin" : document.getElementById(checkin_id).value,
-                                   "checkout" : document.getElementById(checkout_id).value,
-                                   "rooms" : document.getElementById(rooms_id).value
-                                   }
-                                );
+var id = "text_search_" + input_id;
+var search_json = JSON.stringify( { "input" : document.getElementById(id).value});
 send_json('POST',"/SearchedMenus",search_json);
 }
 
