@@ -19,8 +19,6 @@ def get_menu():
     response = "Value Set"
     return response
 
-
-
 @app.route('/SearchedMenus', methods=["POST"])
 def searched_menu():
     SearchJson = request.get_json()
