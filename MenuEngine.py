@@ -1,6 +1,6 @@
 import DbClasses
 from settings import sessionRepo,BaseEntitySet
-from sqlalchemy import text, or_
+from sqlalchemy import text, or_, and_
 from sqlalchemy.exc import SQLAlchemyError
 
 
@@ -54,10 +54,13 @@ def getMenuList(input):
     menu_json = {
         "name": [],
     }
+
     for value in db_result:
         menu_json["name"].append(value.menu_name)
     menuLists = menu_json
     return menuLists
+
+
 
 # This function is to obtain details of the selected Hotels or Reseorts. ie single menu details
 def get_single_menu_details(menuId):
@@ -72,7 +75,7 @@ def get_single_menu_details(menuId):
                                                                                     ON menu.menu_id = room.menu_id
                                                                                     INNER JOIN tbl_app_room_m as app_room
                                                                                     ON app_room.room_id = room.room_id 
-                                                                                    where menu.menu_id = :id''')).params(id=menuId).all()
+                                                                                    where menu.menu_id = :id ''')).params(id=menuId).all()
         if db_result is None:
             response = BaseEntitySet(True, "Selected Menu list is not fetched from MenuRepository")
             return response
@@ -98,4 +101,29 @@ def get_single_menu_details(menuId):
     except SQLAlchemyError as error:
         print(error)
         BaseEntitySet(True, "Selected Menu list is not fetched from MenuRepository")
+
+
+# This function is to return menus details which is entered in the search box by the user.
+def get_searched_menu(input,typeId):
+    search_result = []
+    if input == '':
+        exit()
+    try:
+        session = sessionRepo()
+        db_result = session.query(DbClasses.menus_Repository).with_entities(DbClasses.menus_Repository.menu_id).filter( or_(DbClasses.menus_Repository.city.ilike("%" + input + "%"), DbClasses.menus_Repository.menu_name.ilike("%" + input + "%"))).filter(DbClasses.menus_Repository.type_id.ilike("%" + typeId + "%")).all()
+        if db_result is None or db_result == '':
+            response = BaseEntitySet(True, "Selected Menu ID  not fetched from MenuRepository")
+            return response
+        for id in range(len(db_result)):
+            val = db_result[id]
+            result = get_single_menu_details(val[0])
+            search_result.append(result)
+        if len(search_result) == 0:
+            null_response = BaseEntitySet(True, "Selected Menu is not fetched from MenuRepository")
+            return null_response
+        return search_result
+    except SQLAlchemyError as error:
+        print(error)
+        BaseEntitySet(True, "Selected Menu is not fetched from MenuRepository")
+
 

@@ -9,16 +9,25 @@ app.secret_key = "123"
 
 @app.route('/')
 def home():
-    return render_template('keypress.html')
+    return render_template('index.html')
 
 
 @app.route('/menus', methods=["POST"])
 def get_menu():
     MenuIdJson = request.get_json()
     create_session(key="menuId", value=MenuIdJson["typeId"])
-    result = MenuEngine.get_menus(typeId=session["menuId"])
+    response = "Value Set"
+    return response
+
+
+
+@app.route('/SearchedMenus', methods=["POST"])
+def searched_menu():
+    SearchJson = request.get_json()
+    result = MenuEngine.get_searched_menu(input=SearchJson["input"],typeId=session["menuId"])
     response = json.dumps(result)
     return response
+
 
 
 @app.route('/pressedMenus', methods=["POST"])
