@@ -29,8 +29,6 @@ def searched_menu():
     response = json.dumps(result)
     return response
 
-
-
 @app.route('/pressedMenus', methods=["POST"])
 def get_menu_list():
     MenuIdJson = request.get_json()
