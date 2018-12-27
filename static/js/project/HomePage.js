@@ -38,8 +38,15 @@ $.ajax({
             contentType: 'application/json; charset=utf-8',
             data: send_data,
             success: function(response) {
-
-                console.log(response);
+                                        result= JSON.parse(response)
+                                        if(!result.isFailure)
+                                        {
+                                             console.log(result.menuList)
+                                        }
+                                        else
+                                        {
+                                            console.log(result.message)
+                                        }
 
 
             },

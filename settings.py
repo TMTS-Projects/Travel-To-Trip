@@ -2,11 +2,21 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from flask import session
-import smtplib,os
+import smtplib,os,sys,logging
 from smtplib import SMTPException, SMTPAuthenticationError
+from sqlalchemy.exc import SQLAlchemyError
 
-engine = create_engine('mysql+pymysql://sa:TMTSserver@31@3.86.39.214:9000/travel_to_trip', echo=True)
-Base = declarative_base()
+try:
+    engine = create_engine('mysql+pymysql://sa:TMTSserver@31@3.86.39.214:9000/travel_to_trip', echo=True)
+    Base = declarative_base()
+except SQLAlchemyError as error:
+    print(error)
+    exc_type, exc_obj, exc_tb = sys.exc_info()
+    fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+    print(fname, exc_tb.tb_lineno)
+
+
+
 
 def sessionRepo():
     Session = sessionmaker()
@@ -26,6 +36,31 @@ def BaseEntitySet(flag,message):
     if flag == True:
         print(jsonData["message"])
     return jsonData["message"]
+
+
+
+
+def store_error_log(message):
+    str_msg = str(message)
+    exc_type, exc_obj, exc_tb = sys.exc_info()
+    fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+    exp = str_msg+ "   -    " + fname + "   -   " + str(exc_tb.tb_lineno)
+    filename = 'errorlog.log'
+    if not os.path.exists(filename):
+        file = open(filename, 'w+')
+        file.write("Date-Time               -                                           Error Message                 "
+                   "                                                            -                             "
+                   "FileName       -   Line Number\n")
+        file.close()
+
+    logging.basicConfig(filename=filename, level=logging.DEBUG, format='%(asctime)s %(message)s')
+    logging.debug(exp)
+
+
+
+
+
+
 
 
 def send_mail(to,subject,body):
@@ -55,7 +90,7 @@ def send_mail(to,subject,body):
         BaseEntitySet(True, "The username and/or password you entered for e-mail is incorrect")
 
     except SMTPException as e_excpn:
-        print(e_excpn)
+        store_error_log(e_excpn)
         BaseEntitySet(True, "Error occurred while sending e-mail")
 
 

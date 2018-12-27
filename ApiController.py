@@ -16,7 +16,7 @@ def home():
 def get_menu():
     MenuIdJson = request.get_json()
     create_session(key="menuId", value=MenuIdJson["typeId"])
-    response = "Value Set"
+    response = json.dumps({"isFailure":True,"message":"Value Set"}, default=lambda o: o.__dict__)
     return response
 
 @app.route('/SearchedMenus', methods=["POST"])

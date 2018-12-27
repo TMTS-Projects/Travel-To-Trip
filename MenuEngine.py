@@ -1,5 +1,5 @@
 import DbClasses, DataModels
-from settings import sessionRepo,BaseEntitySet
+from settings import sessionRepo,BaseEntitySet,store_error_log
 from sqlalchemy import text, or_, and_
 from sqlalchemy.exc import SQLAlchemyError
 
@@ -41,7 +41,7 @@ def get_menus(typeId):
         menuList.isFailure = False
 
     except SQLAlchemyError as error:
-        print(error)
+        store_error_log(error)
         menuList.isFailure = True
         menuList.message = "Menu list not fetched from MenuRepository"
 
@@ -73,7 +73,7 @@ def getMenuList(typeId,input):
 
 
     except Exception as error:
-        print(error)
+        store_error_log(error)
         menuLists.isFailure = False
         menuLists.message = "Menu list not fetched from MenuRepository"
 
@@ -118,7 +118,7 @@ def get_single_menu_details(menuId):
 
 
     except SQLAlchemyError as error:
-        print(error)
+        store_error_log(error)
         Menus.isFailure = False
         Menus.message = "Menu list fetched from MenuRepository"
 
@@ -154,7 +154,7 @@ def get_searched_menu(input,typeId):
             return search_result
 
     except SQLAlchemyError as error:
-        print(error)
+        store_error_log(error)
         search_result.isFailure = True
         search_result.message = "Selected Menu ID  not fetched from MenuRepository"
 

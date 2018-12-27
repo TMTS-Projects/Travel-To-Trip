@@ -3,7 +3,7 @@ import datetime
 import DbClasses
 from settings import sessionRepo
 from sqlalchemy.exc import SQLAlchemyError
-from settings import BaseEntitySet
+from settings import BaseEntitySet,store_error_log
 from MenuEngine import get_single_menu_details
 
 def booking_Repository_details(json_data):
@@ -23,7 +23,7 @@ def booking_Repository_details(json_data):
         return response
 
     except SQLAlchemyError as error:
-        print(error)
+        store_error_log(error)
         response = BaseEntitySet(True, "Data not inserted to the booking repository")
         return response
 
@@ -48,7 +48,7 @@ def calculate_rent(selectedId,menuName,cost,checkIn,checkOut,rooms):
                             }
         return TotalCost_Json
     except ValueError as error:
-        print(error)
+        store_error_log(error)
         response = BaseEntitySet(True, "Please provide CheckIn and CheckOut Date")
         return response
 
