@@ -18,7 +18,6 @@ class menus_Repository(Base):
     pin_code = Column("pin_code", Integer)
     type_id = Column("type_id", Integer)
 
-
 class user_Repository(Base):
     __tablename__ = 'tbl_app_user_m'
     user_id= Column("user_id",Integer, primary_key=True)
