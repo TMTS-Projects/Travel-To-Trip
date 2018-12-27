@@ -8,9 +8,7 @@ function send_menu()
 {
 var val=localStorage.getItem("typeId");
 var json=JSON.stringify({"typeId":val});
-
 send_json('POST','/menus',json);
-
 }
 
 

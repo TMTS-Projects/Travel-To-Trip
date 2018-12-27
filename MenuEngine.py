@@ -4,6 +4,7 @@ from sqlalchemy import text, or_, and_
 from sqlalchemy.exc import SQLAlchemyError
 
 
+
 # This function is to fetch all the mneus based on the Menu Id (eg: hotels,resorts,adventure etc). ie menu details.
 def get_menus(typeId):
     menuList = list()
@@ -46,7 +47,7 @@ def get_menus(typeId):
 
 
 #This function is used for fetching the list from the db
-def getMenuList(input):
+def getMenuList(typeId,input):
     menuLists = list()
     menu_json = {
         "name": [],
@@ -60,7 +61,7 @@ def getMenuList(input):
         menu_json["name"].append(value.city)
 
     session = sessionRepo()
-    db_result_menus = session.query(DbClasses.menus_Repository).with_entities(DbClasses.menus_Repository.menu_name).filter(DbClasses.menus_Repository.menu_name.ilike("%"+input+"%")).all()
+    db_result_menus = session.query(DbClasses.menus_Repository).with_entities(DbClasses.menus_Repository.menu_name).filter(DbClasses.menus_Repository.type_id==typeId).filter(DbClasses.menus_Repository.menu_name.ilike("%"+input+"%")).all()
 
     for value in db_result_menus:
         menu_json["name"].append(value.menu_name)

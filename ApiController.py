@@ -32,7 +32,7 @@ def searched_menu():
 @app.route('/pressedMenus', methods=["POST"])
 def get_menu_list():
     MenuIdJson = request.get_json()
-    result = MenuEngine.getMenuList(input=MenuIdJson["text"])
+    result = MenuEngine.getMenuList(typeId=session["menuId"], input=MenuIdJson["text"])
     response = json.dumps(result)
     return response
 
