@@ -7,7 +7,7 @@ from smtplib import SMTPException, SMTPAuthenticationError
 from sqlalchemy.exc import SQLAlchemyError
 
 try:
-    engine = create_engine('mysql+pymysql://sa:TMTSserver@31@3.86.39.214:9000/travel_to_trip', echo=True)
+    engine = create_engine('mysql+pymysql://sa:TMTSserver@31@3.86.39.21:9000/travel_to_trip', echo=True)
     Base = declarative_base()
 except SQLAlchemyError as error:
     print(error)
@@ -48,9 +48,6 @@ def store_error_log(message):
     filename = 'errorlog.log'
     if not os.path.exists(filename):
         file = open(filename, 'w+')
-        file.write("Date-Time               -                                           Error Message                 "
-                   "                                                            -                             "
-                   "FileName       -   Line Number\n")
         file.close()
 
     logging.basicConfig(filename=filename, level=logging.DEBUG, format='%(asctime)s %(message)s')

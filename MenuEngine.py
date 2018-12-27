@@ -159,4 +159,3 @@ def get_searched_menu(input,typeId):
         search_result.message = "Selected Menu ID  not fetched from MenuRepository"
 
     return search_result
-
