@@ -1,8 +1,10 @@
+import datetime
+
 import DbClasses
 from settings import sessionRepo
 from sqlalchemy.exc import SQLAlchemyError
 from settings import BaseEntitySet
-
+from MenuEngine import get_single_menu_details
 
 def booking_Repository_details(json_data):
 
@@ -24,3 +26,30 @@ def booking_Repository_details(json_data):
         print(error)
         response = BaseEntitySet(True, "Data not inserted to the booking repository")
         return response
+
+
+# This function returns total cost of the booking.
+def calculate_rent(selectedId,menuName,cost,checkIn,checkOut,rooms):
+    menuDetails = get_single_menu_details(menuId=selectedId)
+    if checkIn == '' and checkOut == '':
+        response = BaseEntitySet(True, "Please provide CheckIn and CheckOut Date")
+        return response
+    try:
+        d1 = datetime.date(int(checkIn[0:4]), int(checkIn[5:7]), int(checkIn[8:10]))
+        d2 = datetime.date(int(checkOut[0:4]), int(checkOut[5:7]), int(checkOut[8:10]))
+        delta = d2 - d1
+        day = str(delta)
+        nights = int(day[0:2])
+        TotalCost = menuDetails[0]['cost'] * nights * rooms
+
+        TotalCost_Json = {
+                            "total" : TotalCost,
+                            "calculation" : str(menuDetails[0]['cost']) + "*" + str(nights) + "*" + str(rooms)
+                            }
+        return TotalCost_Json
+    except ValueError as error:
+        print(error)
+        response = BaseEntitySet(True, "Please provide CheckIn and CheckOut Date")
+        return response
+
+
