@@ -27,7 +27,6 @@ $(document).ready(function() {
                             success: function(data){
 
                                         result= JSON.parse(data)
-                                        console.log(result["name"])
                                         autComplete(result["name"])
                                     }
                                 });

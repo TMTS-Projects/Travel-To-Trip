@@ -48,25 +48,24 @@ def get_menus(typeId):
 #This function is used for fetching the list from the db
 def getMenuList(input):
     menuLists = list()
-    session = sessionRepo()
-    db_result = session.query(DbClasses.menus_Repository).with_entities(DbClasses.menus_Repository.menu_name,DbClasses.menus_Repository.city).filter(or_(DbClasses.menus_Repository.city.ilike("%"+input+"%"),DbClasses.menus_Repository.menu_name.ilike("%"+input+"%"))).all()
-
     menu_json = {
         "name": [],
     }
 
-    for value in db_result:
+    session = sessionRepo()
+    db_result_cities = session.query(DbClasses.menus_Repository).with_entities(DbClasses.menus_Repository.city).distinct(DbClasses.menus_Repository.city)\
+        .filter(DbClasses.menus_Repository.city.ilike("%" + input + "%")).all()
+
+    for value in db_result_cities:
+        menu_json["name"].append(value.city)
+
+    session = sessionRepo()
+    db_result_menus = session.query(DbClasses.menus_Repository).with_entities(DbClasses.menus_Repository.menu_name).filter(DbClasses.menus_Repository.menu_name.ilike("%"+input+"%")).all()
+
+    for value in db_result_menus:
         menu_json["name"].append(value.menu_name)
     menuLists = menu_json
     return menuLists
-
-
-
-
-
-
-
-
 
 # This function is to obtain details of the selected Hotels or Reseorts. ie single menu details
 def get_single_menu_details(menuId):
@@ -131,5 +130,3 @@ def get_searched_menu(input,typeId):
     except SQLAlchemyError as error:
         print(error)
         BaseEntitySet(True, "Selected Menu is not fetched from MenuRepository")
-
-
