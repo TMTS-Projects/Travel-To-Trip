@@ -41,7 +41,8 @@ $(document).ready(function() {
 
   function autComplete(result)
   {
-    var a=document.getElementById("autoCompleteList_Hotel");
+  var inputId=localStorage.getItem("typeId");
+    var a=document.getElementById("autoCompleteList_"+inputId);
     a.innerHTML="";
     for(var i=0; i<result.length;i++)
     {
