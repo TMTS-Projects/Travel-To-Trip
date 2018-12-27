@@ -1,6 +1,8 @@
 import DbClasses
 from settings import sessionRepo
 from sqlalchemy.exc import SQLAlchemyError
+from settings import BaseEntitySet
+
 
 def booking_Repository_details(json_data):
 
@@ -13,11 +15,12 @@ def booking_Repository_details(json_data):
         booking.no_of_childs=json_data["no_of_childs"]
         booking.no_of_rooms=json_data["no_of_rooms"]
         booking.total_price=json_data["total_price"]
-
         session.add(booking)
         session.commit()
-        return True
+        response = BaseEntitySet(False, "Data inserted to the booking repository")
+        return response
 
     except SQLAlchemyError as error:
         print(error)
-        return True
+        response = BaseEntitySet(True, "Data not inserted to the booking repository")
+        return response

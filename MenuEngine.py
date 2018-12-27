@@ -62,6 +62,12 @@ def getMenuList(input):
 
 
 
+
+
+
+
+
+
 # This function is to obtain details of the selected Hotels or Reseorts. ie single menu details
 def get_single_menu_details(menuId):
     menuList = list()
