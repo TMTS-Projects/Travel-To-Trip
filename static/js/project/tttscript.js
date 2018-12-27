@@ -25,9 +25,16 @@ $(document).ready(function() {
                             data: myJSON,
                             contentType: 'application/json;charset=UTF-8',
                             success: function(data){
+                                  result= JSON.parse(data)
+                                        if(!result.isFailure)
+                                        {
+                                            autComplete(result.menuList)
+                                        }
+                                        else
+                                        {
+                                            console.log(result)
+                                        }
 
-                                        result= JSON.parse(data)
-                                        autComplete(result["name"])
                                     }
                                 });
                                 $(this).siblings(".autocomp_list").addClass("show_list");

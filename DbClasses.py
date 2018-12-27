@@ -58,9 +58,3 @@ class menuRoom_Repository(Base):
     cost= Column("cost",Integer)
     amenities= Column("amenities",String)
     room_info= Column("room_info",String)
-
-
-
-
-
-

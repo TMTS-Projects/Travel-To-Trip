@@ -26,14 +26,14 @@ def searched_menu():
     create_session(key="checkout", value=SearchJson["checkout"])
     create_session(key="rooms", value=SearchJson["rooms"])
     result = MenuEngine.get_searched_menu(input=SearchJson["input"],typeId=session["menuId"])
-    response = json.dumps(result)
+    response = json.dumps(result , default=lambda o: o.__dict__)
     return response
 
 @app.route('/pressedMenus', methods=["POST"])
 def get_menu_list():
     MenuIdJson = request.get_json()
     result = MenuEngine.getMenuList(typeId=session["menuId"], input=MenuIdJson["text"])
-    response = json.dumps(result)
+    response = json.dumps(result, default=lambda o: o.__dict__)
     return response
 
 
@@ -44,7 +44,7 @@ def get_menu_details():
     create_session(key="menuName", value=result["name"])
     create_session(key="location", value=result["city"])
     create_session(key="cost", value=result["cost"])
-    response = json.dumps(result)
+    response = json.dumps(result, default=lambda o: o.__dict__)
     return response
 
 
