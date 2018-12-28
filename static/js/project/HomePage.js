@@ -36,7 +36,20 @@ var search_json = JSON.stringify( { "input" : document.getElementById(text_id).v
                                    "rooms" : document.getElementById(rooms_id).value
                                    }
                                 );
-send_json('POST',"/SearchedMenus",search_json);
+//send_json('POST',"/SearchedMenus",search_json);
+$.ajax({
+            type: 'POST' ,
+            url: "/SearchedMenus",
+            contentType: 'application/json; charset=utf-8',
+            data: search_json,
+            success: function(response) {
+                            window.location.href=response
+
+            },
+            error: function() {
+                console.log();
+            }
+        });
 }
 
 

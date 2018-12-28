@@ -19,15 +19,24 @@ def get_menu():
     response = json.dumps({"isFailure":True,"message":"Value Set"}, default=lambda o: o.__dict__)
     return response
 
+
 @app.route('/SearchedMenus', methods=["POST"])
 def searched_menu():
     SearchJson = request.get_json()
     create_session(key="checkin", value=SearchJson["checkin"])
     create_session(key="checkout", value=SearchJson["checkout"])
     create_session(key="rooms", value=SearchJson["rooms"])
-    result = MenuEngine.get_searched_menu(input=SearchJson["input"],typeId=session["menuId"])
-    response = json.dumps(result , default=lambda o: o.__dict__)
-    return response
+    create_session(key="input", value=SearchJson["input"])
+    return "/SearchMark"
+
+#Searching for resorts and hotels
+@app.route('/SearchMark')
+def search_mark():
+    result = MenuEngine.get_searched_menu(input=session["input"], typeId=session["menuId"])
+    ##response = json.dumps(result, default=lambda o: o.__dict__)
+    print(result)
+    return render_template("filterdata.html", details=result)
+
 
 @app.route('/pressedMenus', methods=["POST"])
 def get_menu_list():

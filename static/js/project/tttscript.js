@@ -101,6 +101,11 @@ $(document).ready(function () {
         a.appendChild(li);
     }
   }
+
+   $('.carousel').carousel({
+        interval: false
+    })
+
 });
 
 

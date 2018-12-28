@@ -122,7 +122,7 @@ def get_single_menu_details(menuId):
         Menus.isFailure = True
         Menus.message = "Menu list fetched from MenuRepository"
 
-    return Menus
+    return Menus.menuList
 
 # This function is to return menus details which is entered in the search box by the user.
 
@@ -146,6 +146,7 @@ def get_searched_menu(input,typeId):
         for id in range(len(db_result)):
             val = db_result[id]
             result = get_single_menu_details(val[0])
+
             search_result.menuList.append(result)
 
         if len(search_result.menuList) == 0:
@@ -159,3 +160,4 @@ def get_searched_menu(input,typeId):
         search_result.message = "Selected Menu ID  not fetched from MenuRepository"
 
     return search_result
+
