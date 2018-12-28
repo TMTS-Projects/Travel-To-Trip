@@ -9,11 +9,11 @@
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous"> -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link type="text/css" href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/datepicker.css" rel="stylesheet" type="text/css">
     <link type="text/css" href="../static/css/tttstyle.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="static/js/project/HomePage.js"></script>
+
     <title>Travel to Trip</title>
 </head>
 
@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <div class="row">
                 <nav class="navbar navbar-expand-md">
-                    <a class="navbar-brand ttt_logo" href="#">
+                    <a class="navbar-brand ttt_logo" href="index.html">
                         <img src="../static/img/travel_logo.png" alt="logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -46,6 +46,7 @@
         </div>
     </header>
     <main>
+        <!-- Start of banner div -->
         <div class="container-fluid home_banner">
             <div class="row">
                 <div id="homebanner" class="carousel slide carousel-fade">
@@ -123,26 +124,26 @@
                             <div class="tab-pane container active" id="tab1">
                                 <div class="cont_input large_input">
                                     <label>Hotel, City or Area</label>
-                                    <input class="transparent_input auto_comp_input" placeholder="Type hotel name or location" id="text_search_1">
+                                    <input class="transparent_input auto_comp_input" placeholder="Type hotel name or location"  id="text_search_1">
                                     <div class="autocomp_list">
-                                        <ul id="autoCompleteList_1">
+                                        <ul class="keyboard_select" id="autoCompleteList_1">
 
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="cont_input checkin">
                                     <label>Check-in</label>
-                                    <input type="date" class="transparent_input" placeholder="Select Date" value="20 Dec, Thu" id="checkin_1">
+                                    <input class="transparent_input checkins" placeholder="Select Date" id="checkin_1" >
                                 </div>
                                 <div class="cont_input checkout">
                                     <label>Check-Out</label>
-                                    <input type="date" class="transparent_input" placeholder="Select Date" id="checkout_1">
+                                    <input class="transparent_input checkouts" placeholder="Select Date" id="checkout_1" >
                                 </div>
                                 <div class="cont_input rooms_guests">
                                     <label>Rooms/guests</label>
                                     <input class="transparent_input" placeholder="Select Room/guests" id="rooms_1">
                                 </div>
-                                <button class="search_icon" type="button" onclick="get_search_result()">
+                                <button type="button" class="search_icon" onclick="get_search_result()">
                                     <span class="svg_icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                             version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 615.52 615.52" style="enable-background:new 0 0 615.52 615.52;"
@@ -158,25 +159,25 @@
                                 <div class="cont_input large_input">
                                     <label>Resorts, City or Area</label>
                                     <input class="transparent_input auto_comp_input" placeholder="Type Resort name or location" id="text_search_2">
-                                    <div class="autocomp_list">
-                                        <ul id ="autoCompleteList_2">
+                                    <div class="autocomp_list" >
+                                        <ul class="keyboard_select" id ="autoCompleteList_2">
 
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="cont_input checkin">
                                     <label>Check-in</label>
-                                    <input type="date" class="transparent_input" placeholder="Select Date" value="20 Dec, Thu" id="checkin_2">
+                                    <input class="transparent_input checkins" placeholder="Select Date"  id="checkin_2" >
                                 </div>
                                 <div class="cont_input checkout">
                                     <label>Check-Out</label>
-                                    <input type="date" class="transparent_input" placeholder="Select Date" id="checkout_2">
+                                    <input class="transparent_input checkouts" placeholder="Select Date" id="checkout_2">
                                 </div>
                                 <div class="cont_input rooms_guests">
                                     <label>Rooms/guests</label>
                                     <input class="transparent_input" placeholder="Select Room/guests" id="rooms_2">
                                 </div>
-                                <button class="search_icon" type="button" onclick="get_search_result()">
+                                <button type="button" class="search_icon" onclick="get_search_result()">
                                     <span class="svg_icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                             version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 615.52 615.52" style="enable-background:new 0 0 615.52 615.52;"
@@ -234,21 +235,222 @@
 
                 </div>
             </div>
+            <!-- <input id="datepicker-1" width="276" /> -->
         </div>
+        <!-- End of banner div -->
+
+        <!-- Start body content in home page -->
+        <div class="container">
+            <div class="row each_home_row">
+                <div class="col-sm-12 subtitle">
+                    <h1 class="text-center">Our Hotels</h1>
+                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="col-sm-6 image_part ip_img_1">
+                    <div class="right_triangle"></div>
+                    <div class="homearrow"></div>
+                </div>
+                <div class="col-sm-6 text_part">
+                    <h3 class="large_title">Lorem Ipsum</h3>
+                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
+                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries,</p>
+                    <a href="" class="spl_btn">Find Hotels</a>
+                </div>
+            </div>
+            <div class="row each_home_row">
+                <div class="col-sm-12 subtitle">
+                    <h1 class="text-center">Our Resorts</h1>
+                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="col-sm-6 order-md-12 image_part ip_img_2">
+                    <div class="right_triangle"></div>
+                    <div class="homearrow"></div>
+                </div>
+                <div class="col-sm-6 order-md-1 text_part">
+                    <h3 class="large_title">Lorem Ipsum</h3>
+                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
+                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries,</p>
+                    <a href="" class="spl_btn">Find Resorts</a>
+                </div>
+            </div>
+            <div class="row each_home_row">
+                <div class="col-sm-12 subtitle">
+                    <h1 class="text-center">Get Ready for Adventure</h1>
+                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="col-sm-6 image_part ip_img_3">
+                    <div class="right_triangle"></div>
+                    <div class="homearrow"></div>
+                </div>
+                <div class="col-sm-6 text_part">
+                    <h3 class="large_title">Lorem Ipsum</h3>
+                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
+                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries,</p>
+                    <a href="" class="spl_btn">Start Adventure</a>
+                </div>
+            </div>
+            <div class="row each_home_row">
+                <div class="col-sm-12 subtitle">
+                    <h1 class="text-center">Holiday Packages</h1>
+                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="col-sm-6 order-md-12 image_part ip_img_4">
+                    <div class="right_triangle"></div>
+                    <div class="homearrow"></div>
+                </div>
+                <div class="col-sm-6 order-md-1 text_part">
+                    <h3 class="large_title">Lorem Ipsum</h3>
+                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
+                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries,</p>
+                    <a href="" class="spl_btn">Find Packages</a>
+                </div>
+            </div>
+            <div class="row each_home_row">
+                <div class="col-sm-12 subtitle">
+                    <h1 class="text-center">We Are Providing Cars for Rental</h1>
+                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="col-sm-6 image_part ip_img_5">
+                    <div class="right_triangle"></div>
+                    <div class="homearrow"></div>
+                </div>
+                <div class="col-sm-6 text_part">
+                    <h3 class="large_title">Lorem Ipsum</h3>
+                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
+                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries,</p>
+                    <a href="" class="spl_btn">Get Cars</a>
+                </div>
+            </div>
+            <div class="row each_home_row">
+                <div class="col-sm-12 subtitle">
+                    <h1 class="text-center">We are Providing Accommodation</h1>
+                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="col-sm-6 order-md-12 image_part ip_img_6">
+                    <div class="right_triangle"></div>
+                    <div class="homearrow"></div>
+                </div>
+                <div class="col-sm-6 order-md-1 text_part">
+                    <h3 class="large_title">Lorem Ipsum</h3>
+                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
+                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries,</p>
+                    <a href="" class="spl_btn">Find Accommodation</a>
+                </div>
+            </div>
+
+            <div class="row each_home_row video_section">
+                <div class="col-sm-12 subtitle">
+                    <h1 class="text-center">Take a Tour</h1>
+                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="col-sm-8 offset-sm-2 video_cont">
+                    <video width="100%" controls poster="../static/img/videoImage.png">
+                        <source src="../static/img/video.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+            </div>
+
+            <!-- <div class="row each_home_row">
+                <div class="col-sm-12 subtitle">
+                    <h1 class="text-center">Choose Your Branded Hotels and Resorts</h1>
+                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="col-sm-12">
+                    <div class="carousel slide multi-item-carousel" id="theCarousel" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-4">
+                                    <a href="#1">
+                                        <img src="../static/img/h_logo_1.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-4">
+                                    <a href="#1">
+                                        <img src="../static/img/h_logo_2.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-4">
+                                    <a href="#1">
+                                        <img src="../static/img/h_logo_3.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-4">
+                                    <a href="#1">
+                                        <img src="../static/img/h_logo_4.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-4">
+                                    <a href="#1">
+                                        <img src="../static/img/h_logo_5.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                    </div>
+                </div>-->
+            </div>
+            <!-- End body content in home page -->
     </main>
     <footer>
-
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 copyright">
+                    Copyright © 2019 <a href="index.html">Travel to Trip</a>, India. All rights reserved
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
-        <!--crossorigin="anonymous"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="../static/js/project/tttscript.js"></script>
+    <script src="static/js/datepicker.js"></script>
+    <script src="static/js/project/tttscript.js"></script>
+  <script src="static/js/project/HomePage.js"></script>
+
 </body>
 
 </html>

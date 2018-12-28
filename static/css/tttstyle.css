@@ -43,7 +43,7 @@ main {
 }
 .home_banner, .home_banner>.row, #homebanner, #homebanner>.carousel-inner, #homebanner>.carousel-inner>.carousel-item{
     height: 100vh;
-    width: 100vw;
+    width: calc(100vw - 17px);
 }
 #homebanner .carousel-1, #homebanner .carousel-2, #homebanner .carousel-3, #homebanner .carousel-4, #homebanner .carousel-5, #homebanner .carousel-6{
     background-size: cover;
@@ -130,7 +130,7 @@ main {
     color: #ffffff;
 }
 #homebanner .carousel-indicators .active a.nav-link .svg_icon svg path {
-    fill: #ffffff;
+    fill: #ea5a2a;
 }
 .banner_search {
     position: absolute;
@@ -175,6 +175,7 @@ a.nav-link .svg_icon svg {
     flex-direction: column;
     text-transform: uppercase;
     line-height: 16px;
+    margin-bottom: 5px;
 }
 .search_icon {
     display: inline-flex;
@@ -186,6 +187,11 @@ a.nav-link .svg_icon svg {
     color: #ffffff;
     background: #EA5A2A;
     border-radius: 6px;
+    border: none;
+    outline: none;
+}
+.search_icon:focus, .search_icon:hover, .search_icon:active {
+    outline: none;
 }
 .search_icon svg {
     width: 21px;
@@ -253,7 +259,7 @@ a.nav-link .svg_icon svg {
     font-size: 14px;
     cursor: pointer;
 }
-.autocomp_list ul li:hover {
+.autocomp_list ul li:hover, .keyboard_select .selected {
     background-color: #ff5a21;
     color: #ffffff;
 }
@@ -263,4 +269,206 @@ a.nav-link .svg_icon svg {
     max-height: 250px;
     overflow: auto;
 }
+footer {
+    background: #17100e;
+    color: #ffffff;
+    padding: 20px;
+}
+.copyright a {
+    color: #ff5a21;
+}
+.copyright {
+    font-size: 12px;
+}
 /* End Banner section in home page*/
+/* Start body content in home page */
+.each_home_row {
+    padding: 40px 0;
+}
+.large_title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ff5a21;
+    margin: 10px 0;
+}
+.medium_title {
+    font-size: 18px;
+    font-weight: 600;
+}
+.lineheight_text {
+    font-size: 16px;
+    color: #270a00;
+    line-height: 26px;
+    margin-bottom: 40px;
+}
+a.spl_btn {
+    font-size: 14px;
+    border: 1px solid #ff5a21;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #ff5a21;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+}
+.image_part{
+    position: relative;
+    height: 330px;
+}
+.ip_img_1{
+    background-image: url(../img/hotels.jpg);
+    background-position: center;
+}
+.ip_img_2{
+    background-image: url(../img/resorts.jpg);
+    background-position: center;
+}
+.ip_img_3{
+    background-image: url(../img/adventure.jpg);
+    background-position: center bottom;
+}
+.ip_img_4{
+    background-image: url(../img/holiday.jpg);
+    background-position: center bottom;
+}
+.ip_img_5{
+    background-image: url(../img/rentcar.jpg);
+    background-position: center bottom;
+}
+.ip_img_6{
+    background-image: url(../img/accommod.jpg);
+    background-position: center bottom;
+}
+.ip_img_1, .ip_img_2, .ip_img_3, .ip_img_4, .ip_img_5, .ip_img_6{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.right_triangle {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-top: 331px solid transparent;
+    border-right: 60px solid #ffffff;
+}
+.order-md-12 .right_triangle {
+    right:auto;
+    left:0;
+    border-top: 331px solid transparent;
+    border-left: 60px solid white;
+    border-right: none;
+}
+.subtitle {
+    margin-bottom: 25px;
+}
+.homearrow {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ff5a21;
+    border-radius: 10px;
+    position: absolute;
+    left: -25px;
+    bottom: 25px;
+}
+.order-md-12 .homearrow {
+    left: auto;
+    right: -25px;
+}
+.subtitle h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+.subtitle p {
+    font-size: 18px;
+}
+/* End body content in home page */
+/* Start Calender Custom css */
+i.gj-icon {
+    display: none;
+}
+.gj-textbox-md:active, .gj-textbox-md:focus {
+    border-bottom: none;
+}
+.gj-picker.gj-picker-md.datepicker.gj-unselectable {
+    border: none;
+    border-radius: 6px;
+    margin-left: -100px;
+    margin-top: 16px;
+    /* display:  block !important; */
+}
+i.gj-icon.chevron-left, .gj-icon.chevron-right {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+}
+i.gj-icon.chevron-left:before, i.gj-icon.chevron-right:before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    display: inline-block !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -5px;
+    margin-left: -4px;
+}
+i.gj-icon.chevron-left:before {
+    transform: rotateZ(-45deg);
+    margin-left: -3px;
+}
+i.gj-icon.chevron-right:before {
+    transform: rotateZ(135deg);
+    margin-left: -7px;
+}
+.gj-picker-md div[role=navigator] {
+    background-color:#EA5A2A;
+    color: #ffffff;
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+}
+.today>div {
+    color: #ea5a2a !important;
+    font-weight: 700;
+    border: 1px solid #ea5a2a;
+    border-radius: 50%;
+}
+.gj-picker-md table tr td.selected.gj-cursor-pointer div {
+    background-color: #ea5a2a;
+    color: #ffffff !important;
+}
+.datepicker table>thead>tr[role="week-days"] th {
+    color: #333333;
+    background-color:#dadada;
+}
+.gj-picker.datepicker:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 13px solid #ea5a2a;
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    margin-left: -5px;
+}
+.gj-picker-md div[role=navigator] div:first-child, .gj-picker-md div[role=navigator] div:last-child, .gj-picker-md div[role=navigator]>div {
+    border-radius: 6px !important;
+}
+/* End Calender Custom css */
+/* Start filter data page design */
+.in_logo {
+    background: yellow;
+}
+.auto_search_suggestion {
+    background: green;
+}
+.common_menu_list {
+    background: red;
+}
+/* Start filter data page design */

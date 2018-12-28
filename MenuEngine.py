@@ -74,7 +74,7 @@ def getMenuList(typeId,input):
 
     except Exception as error:
         store_error_log(error)
-        menuLists.isFailure = False
+        menuLists.isFailure = True
         menuLists.message = "Menu list not fetched from MenuRepository"
 
     return menuLists
@@ -119,7 +119,7 @@ def get_single_menu_details(menuId):
 
     except SQLAlchemyError as error:
         store_error_log(error)
-        Menus.isFailure = False
+        Menus.isFailure = True
         Menus.message = "Menu list fetched from MenuRepository"
 
     return Menus
