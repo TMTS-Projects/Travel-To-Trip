@@ -51,7 +51,7 @@ def store_error_log(message):
         file.close()
 
     logging.basicConfig(filename=filename, level=logging.DEBUG, format='%(asctime)s %(message)s')
-    logging.debug(exp)
+    logging.error(exp)
 
 
 
