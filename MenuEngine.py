@@ -36,7 +36,7 @@ def get_menus(typeId):
                             "amenities" : value.menuRoom_Repository.amenities,
                             "info" : value.menuRoom_Repository.room_info
                         }
-            menuList.append(menu_json)
+            menuList.menuList.append(menu_json)
 
         menuList.isFailure = False
 
@@ -78,6 +78,7 @@ def getMenuList(typeId,input):
         menuLists.message = "Menu list not fetched from MenuRepository"
 
     return menuLists
+
 
 # This function is to obtain details of the selected Hotels or Reseorts. ie single menu details
 def get_single_menu_details(menuId):
@@ -124,6 +125,7 @@ def get_single_menu_details(menuId):
 
     return Menus.menuList
 
+
 # This function is to return menus details which is entered in the search box by the user.
 
 def get_searched_menu(input,typeId):
@@ -153,11 +155,51 @@ def get_searched_menu(input,typeId):
             search_result.isFailure = False
             search_result.message = "Selected Menu ID  not fetched from MenuRepository"
             return search_result
-
+        #for data in search_result.menuList:
+        #print(search_result.menuList[0][0]['city'])
     except SQLAlchemyError as error:
         store_error_log(error)
         search_result.isFailure = True
         search_result.message = "Selected Menu ID  not fetched from MenuRepository"
 
     return search_result
+
+
+
+def filter_menu_list(typeId,city,fromValue,toValue):
+    Menus = DataModels.List_Menu_Details()
+    menuIdList = list()
+    menu_json = dict()
+    try:
+        session = sessionRepo()
+        db_result = session.query(DbClasses.menus_Repository)\
+            .filter(DbClasses.menus_Repository.type_id == typeId).filter(DbClasses.menus_Repository.city.ilike("%" + city + "%")).all()
+        for data in db_result:
+            menuIdList.append(data.menu_id)
+        db_info_result = session.query(DbClasses.menuRoom_Repository)\
+            .filter(DbClasses.menuRoom_Repository.menu_id.in_(menuIdList)).filter(DbClasses.menuRoom_Repository.cost <=toValue).filter(DbClasses.menuRoom_Repository.cost >= fromValue).all()
+
+
+        if db_result is None:
+            response = BaseEntitySet(True, "Selected Menu list is not fetched from MenuRepository")
+        for value,item in zip(db_result,db_info_result):
+            menu_json = {
+                "id": value.menu_id,
+                "name": value.menu_name,
+                "address": value.place_address,
+                "city": value.city,
+                "state": value.state,
+                "country": value.country,
+                "cost": item.cost,
+                "amenities": item.amenities,
+                "info": item.room_info
+            }
+            Menus.menuList.append(menu_json)
+        print(Menus.menuList)
+
+    except SQLAlchemyError as error:
+        store_error_log(error)
+        Menus.isFailure = True
+        Menus.message = "Selected Menu list is not fetched from MenuRepository"
+
 

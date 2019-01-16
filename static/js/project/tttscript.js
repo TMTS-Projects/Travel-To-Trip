@@ -14,7 +14,7 @@ $(document).ready(function () {
     // End switching the search tabs in home banner
 
     // Start hide and show of autocomplete list
-    $(".auto_comp_input").keyup(function(e) {
+        $(".auto_comp_input").keyup(function(e) {
             var input_length = $(this).val().length;
             if (input_length > 0) {
                  var myJSON = JSON.stringify({"text":$(this).val()});
@@ -44,11 +44,20 @@ $(document).ready(function () {
                 }
 
     });
+
     // End hide and show of autocomplete list
 
+    // Start hide and show of room and guest selection
+    $(".add_rooms_input").on('click', function () {
+        $(this).siblings(".add_rooms_guests").addClass("show_rooms");
+    });
+    $(".done").on('click', function () {
+        $(".add_rooms_guests").removeClass("show_rooms");
+    });
+    // End hide and show of room and guest selection
 
     // Start binding the autocomplete data list to input
-    $(document).on("click",".autocomp_list ul li", function () {
+     $(document).on("click",".autocomp_list ul li", function () {
         var autoListSelect = $(this).text();
         $(this).closest(".autocomp_list").siblings(".auto_comp_input").val(autoListSelect);
         $(this).closest(".autocomp_list").removeClass("show_list");
@@ -58,55 +67,78 @@ $(document).ready(function () {
     // Start selecting the ul list using keyboard up and down key
     var li = $('.keyboard_select li');
     var liSelected;
-    $(window).keydown(function(e){
-        if(e.which === 40){
-            if(liSelected){
+    $(window).keydown(function (e) {
+        if (e.which === 40) {
+            if (liSelected) {
                 liSelected.removeClass('selected');
                 next = liSelected.next();
-                if(next.length > 0){
+                if (next.length > 0) {
                     liSelected = next.addClass('selected');
-                }else{
+                } else {
                     liSelected = li.eq(0).addClass('selected');
                 }
-            }else{
+            } else {
                 liSelected = li.eq(0).addClass('selected');
             }
-        }else if(e.which === 38){
-            if(liSelected){
+        } else if (e.which === 38) {
+            if (liSelected) {
                 liSelected.removeClass('selected');
                 next = liSelected.prev();
-                if(next.length > 0){
+                if (next.length > 0) {
                     liSelected = next.addClass('selected');
-                }else{
+                } else {
                     liSelected = li.last().addClass('selected');
                 }
-            }else{
+            } else {
                 liSelected = li.last().addClass('selected');
             }
         }
     });
     // End selecting the ul list using keyboard up and down key
 
+        function autComplete(result)
+          {
+          var inputId=localStorage.getItem("typeId");
+            var a=document.getElementById("autoCompleteList_"+inputId);
+            a.innerHTML="";
+            for(var i=0; i<result.length;i++)
+            {
+                var li= document.createElement("li");
+                li.innerText=result[i];
+                a.appendChild(li);
+            }
+          }
 
 
-    function autComplete(result)
-  {
-  var inputId=localStorage.getItem("typeId");
-    var a=document.getElementById("autoCompleteList_"+inputId);
-    a.innerHTML="";
-    for(var i=0; i<result.length;i++)
-    {
-        var li= document.createElement("li");
-        li.innerText=result[i];
-        a.appendChild(li);
-    }
-  }
-
-   $('.carousel').carousel({
+    $('.carousel').carousel({
         interval: false
     })
 
+    // Start Four column carousel of bootstrap 4
+    $('.fourCarousel').carousel({
+        interval: 10000
+    })
+
+    $('.fourCarousel .carousel-item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < 2; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+    // End Four column carousel of bootstrap 4
 });
+
+
 
 
 
@@ -140,6 +172,4 @@ var checkout_id = "#checkout_" + input_id;
         });
 
 }
-
-
 

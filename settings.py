@@ -7,7 +7,7 @@ from smtplib import SMTPException, SMTPAuthenticationError
 from sqlalchemy.exc import SQLAlchemyError
 
 try:
-    engine = create_engine('mysql+pymysql://sa:TMTSserver@31@54.173.57.41:9000/travel_to_trip', echo=True)
+    engine = create_engine('mysql+pymysql://sa:TMTSserver@31@174.129.81.109:9000/travel_to_trip', echo=True)
     Base = declarative_base()
 except SQLAlchemyError as error:
     print(error)

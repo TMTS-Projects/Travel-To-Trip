@@ -33,9 +33,12 @@ def searched_menu():
 @app.route('/SearchMark')
 def search_mark():
     result = MenuEngine.get_searched_menu(input=session["input"], typeId=session["menuId"])
-    ##response = json.dumps(result, default=lambda o: o.__dict__)
-    print(result)
-    return render_template("filterdata.html", details=result)
+    create_session(key="city", value=result.menuList[0][0]['city'])
+    response = json.dumps(result, default=lambda o: o.__dict__)
+    if session["checkin"] != "NaN-aN-aN" and session["checkout"] != "NaN-aN-aN":
+        return render_template("filterdata.html", details=result,city=session["city"],checkin=session["checkin"],checkout=session["checkout"])
+    elif session["checkin"] == "NaN-aN-aN" and session["checkout"] == "NaN-aN-aN":
+        return render_template("filterdata.html", details=result,city=session["city"],checkin='',checkout='')
 
 
 @app.route('/pressedMenus', methods=["POST"])
@@ -50,9 +53,17 @@ def get_menu_list():
 def get_menu_details():
     SingleMenuIdJson = request.get_json()
     result = MenuEngine.get_single_menu_details(menuId=SingleMenuIdJson["menuId"])
-    create_session(key="menuName", value=result["name"])
-    create_session(key="location", value=result["city"])
-    create_session(key="cost", value=result["cost"])
+    # create_session(key="menuName", value=result["name"])
+    # create_session(key="location", value=result["city"])
+    # create_session(key="cost", value=result["cost"])
+    response = json.dumps(result, default=lambda o: o.__dict__)
+    return response
+
+
+@app.route('/filteredMenus', methods=["POST"])
+def get_filter_menu_list():
+    FilterJson = request.get_json()
+    result = MenuEngine.filter_menu_list(typeId=session["menuId"],city=session["city"],fromValue=FilterJson["min"],toValue=FilterJson["max"])
     response = json.dumps(result, default=lambda o: o.__dict__)
     return response
 

@@ -4,15 +4,15 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link type="text/css" href="../static/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/datepicker.css" rel="stylesheet" type="text/css">
-    <link type="text/css" href="../static/css/tttstyle.css" rel="stylesheet">
+    <link type="text/css" href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/datepicker.css" rel="stylesheet" type="text/css">
+    <link type="text/css" href="static/css/tttstyle.css" rel="stylesheet">
 
     <title>Travel to Trip</title>
 </head>
@@ -23,11 +23,14 @@
             <div class="row">
                 <nav class="navbar navbar-expand-md">
                     <a class="navbar-brand ttt_logo" href="index.html">
-                        <img src="../static/img/travel_logo.png" alt="logo">
+                        <img src="static/img/travel_logo.png" alt="logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
                     </button>
+                    <span  class="navbar-toggler close_bg collapsed" data-toggle="collapse" data-target="#collapsibleNavbar"></span>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav">
                             <li class="nav-item">
@@ -37,7 +40,7 @@
                                 <a class="nav-link" href="#">Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Login</a>
+                                <a class="nav-link" href="login.html">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -124,42 +127,93 @@
                             <div class="tab-pane container active" id="tab1">
                                 <div class="cont_input large_input">
                                     <label>Hotel, City or Area</label>
-                                    <input class="transparent_input auto_comp_input" placeholder="Type hotel name or location"  id="text_search_1">
+                                    <input class="transparent_input auto_comp_input" placeholder="Type hotel name or location" id="text_search_1">
                                     <div class="autocomp_list">
                                         <ul class="keyboard_select" id="autoCompleteList_1">
-
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="cont_input checkin">
                                     <label>Check-in</label>
-                                    <input class="transparent_input checkins" placeholder="Select Date" id="checkin_1" >
+                                    <input class="transparent_input" placeholder="Select Date" id="checkin_1">
                                 </div>
                                 <div class="cont_input checkout">
                                     <label>Check-Out</label>
-                                    <input class="transparent_input checkouts" placeholder="Select Date" id="checkout_1" >
+                                    <input class="transparent_input" placeholder="Select Date" id="checkout_1">
                                 </div>
                                 <div class="cont_input rooms_guests">
                                     <label>Rooms/guests</label>
-                                    <input class="transparent_input" placeholder="Select Room/guests" id="rooms_1">
+                                    <input class="transparent_input add_rooms_input" placeholder="Select Room/guests" id="rooms_1">
+                                    <div class="add_rooms_guests">
+                                        <div class="single_room">
+                                            <h5 class="room_name">Room 1</h5>
+                                            <div class="select_guests">
+                                                <div class="guest_adults">
+                                                    <h6 class="small_head_ttl">Adult (+12yrs)</h6>
+                                                    <div class="row m_left m_right">
+                                                        <button type="button" class="numb_btn selected">1</button>
+                                                        <button type="button" class="numb_btn">2</button>
+                                                        <button type="button" class="numb_btn">3</button>
+                                                        <button type="button" class="numb_btn">4</button>
+                                                        <button type="button" class="numb_btn">5</button>
+                                                        <button type="button" class="numb_btn">6</button>
+                                                    </div>
+                                                </div>
+                                                <div class="guest_adults guest_children">
+                                                    <h6 class="small_head_ttl">Children (1-12yrs)</h6>
+                                                    <div class="row m_left m_right">
+                                                        <button type="button" class="numb_btn">1</button>
+                                                        <button type="button" class="numb_btn">2</button>
+                                                        <button type="button" class="numb_btn selected">3</button>
+                                                        <button type="button" class="numb_btn">4</button>
+                                                    </div>
+                                                    <div class="select_child_age">
+                                                        <h6 class="small_head_ttl">Age of Child 1</h6>
+                                                        <div class="row m_left m_right">
+                                                            <button type="button" class="numb_btn">1</button>
+                                                            <button type="button" class="numb_btn">2</button>
+                                                            <button type="button" class="numb_btn">3</button>
+                                                            <button type="button" class="numb_btn">4</button>
+                                                            <button type="button" class="numb_btn">5</button>
+                                                            <button type="button" class="numb_btn">6</button>
+                                                            <button type="button" class="numb_btn">7</button>
+                                                            <button type="button" class="numb_btn">8</button>
+                                                            <button type="button" class="numb_btn">9</button>
+                                                            <button type="button" class="numb_btn selected">10</button>
+                                                            <button type="button" class="numb_btn">11</button>
+                                                            <button type="button" class="numb_btn">12</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add_roomtrig">
+                                            <button type="button">ADD ROOM</button>
+                                            <button type="butotn" class="done">Done</a></button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <button type="button" class="search_icon" onclick="get_search_result()">
-                                    <span class="svg_icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 615.52 615.52" style="enable-background:new 0 0 615.52 615.52;"
-                                            xml:space="preserve">
-                                            <path d="M602.531,549.736l-184.31-185.368c26.679-37.72,42.528-83.729,42.528-133.548C460.75,103.35,357.997,0,231.258,0      C104.518,0,1.765,103.35,1.765,230.82c0,127.47,102.753,230.82,229.493,230.82c49.53,0,95.271-15.944,132.78-42.777      l184.31,185.366c7.482,7.521,17.292,11.291,27.102,11.291c9.812,0,19.62-3.77,27.083-11.291      C617.496,589.188,617.496,564.777,602.531,549.736z M355.9,319.763l-15.042,21.273L319.7,356.174      c-26.083,18.658-56.667,28.526-88.442,28.526c-84.365,0-152.995-69.035-152.995-153.88c0-84.846,68.63-153.88,152.995-153.88      s152.996,69.034,152.996,153.88C384.271,262.769,374.462,293.526,355.9,319.763z" />
-                                        </svg>
-                                    </span>
-                                    Search
-                                </button>
+                                <!--<div class="search_icon">-->
+                                    <!--<a href="filterdata.html">-->
+                                        <span class="svg_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 615.52 615.52"
+                                                style="enable-background:new 0 0 615.52 615.52;" xml:space="preserve">
+                                                <path d="M602.531,549.736l-184.31-185.368c26.679-37.72,42.528-83.729,42.528-133.548C460.75,103.35,357.997,0,231.258,0      C104.518,0,1.765,103.35,1.765,230.82c0,127.47,102.753,230.82,229.493,230.82c49.53,0,95.271-15.944,132.78-42.777      l184.31,185.366c7.482,7.521,17.292,11.291,27.102,11.291c9.812,0,19.62-3.77,27.083-11.291      C617.496,589.188,617.496,564.777,602.531,549.736z M355.9,319.763l-15.042,21.273L319.7,356.174      c-26.083,18.658-56.667,28.526-88.442,28.526c-84.365,0-152.995-69.035-152.995-153.88c0-84.846,68.63-153.88,152.995-153.88      s152.996,69.034,152.996,153.88C384.271,262.769,374.462,293.526,355.9,319.763z" />
+                                            </svg>
+                                        </span>
+                                        Search
+                                     </button>
+                                    <!--</a>-->
+                                <!--</div>-->
                             </div>
 
                             <div class="tab-pane container fade" id="tab2">
                                 <div class="cont_input large_input">
                                     <label>Resorts, City or Area</label>
                                     <input class="transparent_input auto_comp_input" placeholder="Type Resort name or location" id="text_search_2">
-                                    <div class="autocomp_list" >
+                                    <div class="autocomp_list">
                                         <ul class="keyboard_select" id ="autoCompleteList_2">
 
                                         </ul>
@@ -167,26 +221,30 @@
                                 </div>
                                 <div class="cont_input checkin">
                                     <label>Check-in</label>
-                                    <input class="transparent_input checkins" placeholder="Select Date"  id="checkin_2" >
+                                    <input class="transparent_input" placeholder="Select Date" id="checkin_2" >
                                 </div>
                                 <div class="cont_input checkout">
                                     <label>Check-Out</label>
-                                    <input class="transparent_input checkouts" placeholder="Select Date" id="checkout_2">
+                                    <input class="transparent_input" placeholder="Select Date" id="checkout_2">
                                 </div>
                                 <div class="cont_input rooms_guests">
                                     <label>Rooms/guests</label>
                                     <input class="transparent_input" placeholder="Select Room/guests" id="rooms_2">
                                 </div>
                                 <button type="button" class="search_icon" onclick="get_search_result()">
-                                    <span class="svg_icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 615.52 615.52" style="enable-background:new 0 0 615.52 615.52;"
-                                            xml:space="preserve">
-                                            <path d="M602.531,549.736l-184.31-185.368c26.679-37.72,42.528-83.729,42.528-133.548C460.75,103.35,357.997,0,231.258,0      C104.518,0,1.765,103.35,1.765,230.82c0,127.47,102.753,230.82,229.493,230.82c49.53,0,95.271-15.944,132.78-42.777      l184.31,185.366c7.482,7.521,17.292,11.291,27.102,11.291c9.812,0,19.62-3.77,27.083-11.291      C617.496,589.188,617.496,564.777,602.531,549.736z M355.9,319.763l-15.042,21.273L319.7,356.174      c-26.083,18.658-56.667,28.526-88.442,28.526c-84.365,0-152.995-69.035-152.995-153.88c0-84.846,68.63-153.88,152.995-153.88      s152.996,69.034,152.996,153.88C384.271,262.769,374.462,293.526,355.9,319.763z" />
-                                        </svg>
-                                    </span>
-                                    Search
-                                </button>
+                                <!--<div class="search_icon">-->
+                                    <!--<a href="filterdata.html">-->
+                                        <span class="svg_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 615.52 615.52"
+                                                style="enable-background:new 0 0 615.52 615.52;" xml:space="preserve">
+                                                <path d="M602.531,549.736l-184.31-185.368c26.679-37.72,42.528-83.729,42.528-133.548C460.75,103.35,357.997,0,231.258,0      C104.518,0,1.765,103.35,1.765,230.82c0,127.47,102.753,230.82,229.493,230.82c49.53,0,95.271-15.944,132.78-42.777      l184.31,185.366c7.482,7.521,17.292,11.291,27.102,11.291c9.812,0,19.62-3.77,27.083-11.291      C617.496,589.188,617.496,564.777,602.531,549.736z M355.9,319.763l-15.042,21.273L319.7,356.174      c-26.083,18.658-56.667,28.526-88.442,28.526c-84.365,0-152.995-69.035-152.995-153.88c0-84.846,68.63-153.88,152.995-153.88      s152.996,69.034,152.996,153.88C384.271,262.769,374.462,293.526,355.9,319.763z" />
+                                            </svg>
+                                        </span>
+                                        Search
+                                    </button>
+                                    <!--</a>-->
+                                <!--</div>-->
                             </div>
 
                             <div class="tab-pane container fade" id="tab3">
@@ -243,115 +301,118 @@
         <div class="container">
             <div class="row each_home_row">
                 <div class="col-sm-12 subtitle">
-                    <h1 class="text-center">Our Hotels</h1>
-                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                    <h1 class="text-center">Our Luxurious Hotels</h1>
+                    <p class="text-center">A hotel isn't like a home, but it's better than being a house guest</p>
                 </div>
                 <div class="col-sm-6 image_part ip_img_1">
                     <div class="right_triangle"></div>
                     <div class="homearrow"></div>
                 </div>
                 <div class="col-sm-6 text_part">
-                    <h3 class="large_title">Lorem Ipsum</h3>
-                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
-                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries,</p>
-                    <a href="" class="spl_btn">Find Hotels</a>
+                    <h3 class="large_title">Time To Take Rest</h3>
+                    <p class="medium_title">We show hotels according to your comfort level</p>
+                    <p class="lineheight_text">Travel To Trip (T<sup>3</sup>) hotels has launched an ecosystem for
+                        India Hotels to the Tourists to make all your travel plans more comfortable!,Memorable and
+                        Tension free Trip to Enjoy. Our core focus in providing best amenities at lowest prices to all
+                        Our Customers.</p>
+                    <p class="lineheight_text">Hotels in India are ideal for all your travel plans, with the
+                        accommodation suitable for business travel, leisure travel,Family Travel</p>
+                    <a href="suggestedplan.html" class="spl_btn">Find Hotels</a>
                 </div>
             </div>
             <div class="row each_home_row">
                 <div class="col-sm-12 subtitle">
-                    <h1 class="text-center">Our Resorts</h1>
-                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                    <h1 class="text-center">World's Best Resorts</h1>
+                    <p class="text-center">Choose our resorts to fill your heart with sweet memories</p>
                 </div>
                 <div class="col-sm-6 order-md-12 image_part ip_img_2">
                     <div class="right_triangle"></div>
                     <div class="homearrow"></div>
                 </div>
                 <div class="col-sm-6 order-md-1 text_part">
-                    <h3 class="large_title">Lorem Ipsum</h3>
-                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
-                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries,</p>
-                    <a href="" class="spl_btn">Find Resorts</a>
+                    <h3 class="large_title">Time To Enjoy</h3>
+                    <p class="medium_title">When ever you go, go with all your heart</p>
+                    <p class="lineheight_text">We've tried to create something that's much more like being at a
+                        mountain resort. Many of these types of facilities done in the past paid little regard to
+                        structure or the environment and just focused on the sport of skiing.</p>
+                    <p class="lineheight_text">We've gone a step further and provided an immersive environment.</p>
+                    <p class="lineheight_text">Have a look at our best resorts which are value for money.</p>
+                    <a href="suggestedplan.html" class="spl_btn">Find Resorts</a>
                 </div>
             </div>
             <div class="row each_home_row">
                 <div class="col-sm-12 subtitle">
-                    <h1 class="text-center">Get Ready for Adventure</h1>
-                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                    <h1 class="text-center">Adventure Packages</h1>
+                    <p class="text-center">Select your packages and get ready for adventure</p>
                 </div>
                 <div class="col-sm-6 image_part ip_img_3">
                     <div class="right_triangle"></div>
                     <div class="homearrow"></div>
                 </div>
                 <div class="col-sm-6 text_part">
-                    <h3 class="large_title">Lorem Ipsum</h3>
-                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
-                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries,</p>
+                    <h3 class="large_title">Adventure Time</h3>
+                    <p class="medium_title">Water and Forest Adventures were planned for you</p>
+                    <p class="lineheight_text">We live in a wonderful world that is full of beauty, charm and
+                        adventure. There is no end to the adventures that we can have if only we seek them with our
+                        eyes open.</p>
+                    <p class="lineheight_text">We are providing safe adventures to enjoy this world. Explore more for
+                        adventure packages</p>
                     <a href="" class="spl_btn">Start Adventure</a>
                 </div>
             </div>
             <div class="row each_home_row">
                 <div class="col-sm-12 subtitle">
                     <h1 class="text-center">Holiday Packages</h1>
-                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                    <p class="text-center">At least once a year go someplace you've never been before</p>
                 </div>
                 <div class="col-sm-6 order-md-12 image_part ip_img_4">
                     <div class="right_triangle"></div>
                     <div class="homearrow"></div>
                 </div>
                 <div class="col-sm-6 order-md-1 text_part">
-                    <h3 class="large_title">Lorem Ipsum</h3>
-                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
-                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries,</p>
+                    <h3 class="large_title">It's Your Time</h3>
+                    <p class="medium_title">At least once a year go someplace you've never been before</p>
+                    <p class="lineheight_text">The holidays are the time of year when we all get to relax and share
+                        time with family and friends and comes as a blissful release from all the hustle and bustles
+                        that usually marks our daily lives.</p>
+                    <p class="lineheight_text">We are giving you best packages to enjoy your holidays. Explore your
+                        holiday packages</p>
                     <a href="" class="spl_btn">Find Packages</a>
                 </div>
             </div>
             <div class="row each_home_row">
                 <div class="col-sm-12 subtitle">
-                    <h1 class="text-center">We Are Providing Cars for Rental</h1>
-                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                    <h1 class="text-center">Car Rental</h1>
+                    <p class="text-center">We Are Providing Cars for Rental</p>
                 </div>
                 <div class="col-sm-6 image_part ip_img_5">
                     <div class="right_triangle"></div>
                     <div class="homearrow"></div>
                 </div>
                 <div class="col-sm-6 text_part">
-                    <h3 class="large_title">Lorem Ipsum</h3>
-                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
-                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries,</p>
+                    <h3 class="large_title">Drive Your Favourite Car</h3>
+                    <p class="medium_title">The cars you drive says a lot about you</p>
+                    <p class="lineheight_text">So whether you need one car or a few hundred, "Travel To Trip" can help
+                        achieve significant cost savings, reduce administrative hassles and increase productivity.</p>
+                    <p class="lineheight_text">What kind of car you are looking for, choose our best cars.</p>
                     <a href="" class="spl_btn">Get Cars</a>
                 </div>
             </div>
             <div class="row each_home_row">
                 <div class="col-sm-12 subtitle">
-                    <h1 class="text-center">We are Providing Accommodation</h1>
-                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                    <h1 class="text-center">Accommodation</h1>
+                    <p class="text-center">We are Providing Accommodation</p>
                 </div>
                 <div class="col-sm-6 order-md-12 image_part ip_img_6">
                     <div class="right_triangle"></div>
                     <div class="homearrow"></div>
                 </div>
                 <div class="col-sm-6 order-md-1 text_part">
-                    <h3 class="large_title">Lorem Ipsum</h3>
-                    <p class="medium_title">Lorem Ipsum is simply dummy text of the printing</p>
-                    <p class="lineheight_text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                        survived not only five centuries,</p>
+                    <h3 class="large_title">Stay in our Accommmodation</h3>
+                    <p class="medium_title">To stay for long or short time, our accommodation will help you</p>
+                    <p class="lineheight_text">No matter in which location you need accommodation, we will help you to
+                        stay in a place where you will feel like in your home.</p>
+                    <p class="lineheight_text">We value for your comfort and money spent.</p>
                     <a href="" class="spl_btn">Find Accommodation</a>
                 </div>
             </div>
@@ -359,80 +420,26 @@
             <div class="row each_home_row video_section">
                 <div class="col-sm-12 subtitle">
                     <h1 class="text-center">Take a Tour</h1>
-                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
+                    <p class="text-center">Take a decision to travel with us, we show you how sweet the world is...!!!</p>
                 </div>
                 <div class="col-sm-8 offset-sm-2 video_cont">
-                    <video width="100%" controls poster="../static/img/videoImage.png">
-                        <source src="../static/img/video.mp4" type="video/mp4">
+                    <video width="100%" controls poster="static/img/videoImage.png">
+                        <source src="static/img/video.mp4" type="video/mp4">
                         Your browser does not support HTML5 video.
                     </video>
                 </div>
             </div>
-
-            <!-- <div class="row each_home_row">
-                <div class="col-sm-12 subtitle">
-                    <h1 class="text-center">Choose Your Branded Hotels and Resorts</h1>
-                    <p class="text-center">Lorem Ipsum is simply dummy text of the printing</p>
-                </div>
-                <div class="col-sm-12">
-                    <div class="carousel slide multi-item-carousel" id="theCarousel" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                            <li data-target="#myCarousel" data-slide-to="3"></li>
-                            <li data-target="#myCarousel" data-slide-to="4"></li>
-                        </ol>
-
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="col-sm-4">
-                                    <a href="#1">
-                                        <img src="../static/img/h_logo_1.jpg" class="img-responsive">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-4">
-                                    <a href="#1">
-                                        <img src="../static/img/h_logo_2.png" class="img-responsive">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-4">
-                                    <a href="#1">
-                                        <img src="../static/img/h_logo_3.png" class="img-responsive">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-4">
-                                    <a href="#1">
-                                        <img src="../static/img/h_logo_4.png" class="img-responsive">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-4">
-                                    <a href="#1">
-                                        <img src="../static/img/h_logo_5.png" class="img-responsive">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-                        <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-                    </div>
-                </div>-->
-            </div>
-            <!-- End body content in home page -->
+        </div>
+        <!-- End body content in home page -->
     </main>
     <footer>
         <div class="container">
-            <div class="row text-center">
-                <div class="col-12 copyright">
+            <div class="row">
+                <div class="col-sm-6 copyright">
                     Copyright © 2019 <a href="index.html">Travel to Trip</a>, India. All rights reserved
+                </div>
+                <div class="col-sm-6 copyright">
+                    <p class="text-right m_bottom">Powered by <a href="https://talentmagnifia.com/" target="_blank">TMTS</a></p>
                 </div>
             </div>
         </div>
@@ -440,10 +447,10 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
