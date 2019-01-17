@@ -312,93 +312,93 @@
                                 <h2>Hotels in {{city}}</h2>
                                 <p>These are the best hotels in {{city}}</p>
                             </div>
-
+                            {% block body %}{% endblock %}
                             <!-- ************** Start each gall view **************-->
 
-                            {% for menus in details.menuList %}
-                            <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
-                                <div class="host_gall">
-                                    <div class="img_htls">
-                                        <div id="gal-1" class="carousel slide">
-                                            <!-- Indicators -->
-                                            <ul class="carousel-indicators">
-                                                <li data-target="#gal-1" data-slide-to="0" class="active"></li>
-                                                <li data-target="#gal-1" data-slide-to="1"></li>
-                                                <li data-target="#gal-1" data-slide-to="2"></li>
-                                                <li data-target="#gal-1" data-slide-to="3"></li>
-                                                <li data-target="#gal-1" data-slide-to="4"></li>
-                                                <li data-target="#gal-1" data-slide-to="5"></li>
-                                            </ul>
+                            <!--{% for menus in details.menuList %}-->
+                            <!--<div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">-->
+                                <!--<div class="host_gall">-->
+                                    <!--<div class="img_htls">-->
+                                        <!--<div id="gal-1" class="carousel slide">-->
+                                            <!--&lt;!&ndash; Indicators &ndash;&gt;-->
+                                            <!--<ul class="carousel-indicators">-->
+                                                <!--<li data-target="#gal-1" data-slide-to="0" class="active"></li>-->
+                                                <!--<li data-target="#gal-1" data-slide-to="1"></li>-->
+                                                <!--<li data-target="#gal-1" data-slide-to="2"></li>-->
+                                                <!--<li data-target="#gal-1" data-slide-to="3"></li>-->
+                                                <!--<li data-target="#gal-1" data-slide-to="4"></li>-->
+                                                <!--<li data-target="#gal-1" data-slide-to="5"></li>-->
+                                            <!--</ul>-->
 
-                                            <!-- The slideshow -->
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <div class="htl_images">
-                                                        <img src="static/img/htls_1.png" alt="image">
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <div class="htl_images">
-                                                        <img src="static/img/htls_2.png" alt="image">
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <div class="htl_images">
-                                                        <img src="static/img/htls_3.png" alt="image">
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <div class="htl_images">
-                                                        <img src="static/img/htls_4.png" alt="image">
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <div class="htl_images">
-                                                        <img src="static/img/htls_5.png" alt="image">
-                                                    </div>
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <div class="htl_images">
-                                                        <img src="static/img/htls_6.png" alt="image">
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <!--&lt;!&ndash; The slideshow &ndash;&gt;-->
+                                            <!--<div class="carousel-inner">-->
+                                                <!--<div class="carousel-item active">-->
+                                                    <!--<div class="htl_images">-->
+                                                        <!--<img src="static/img/htls_1.png" alt="image">-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="carousel-item">-->
+                                                    <!--<div class="htl_images">-->
+                                                        <!--<img src="static/img/htls_2.png" alt="image">-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="carousel-item">-->
+                                                    <!--<div class="htl_images">-->
+                                                        <!--<img src="static/img/htls_3.png" alt="image">-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="carousel-item">-->
+                                                    <!--<div class="htl_images">-->
+                                                        <!--<img src="static/img/htls_4.png" alt="image">-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="carousel-item">-->
+                                                    <!--<div class="htl_images">-->
+                                                        <!--<img src="static/img/htls_5.png" alt="image">-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                                <!--<div class="carousel-item">-->
+                                                    <!--<div class="htl_images">-->
+                                                        <!--<img src="static/img/htls_6.png" alt="image">-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
 
-                                            <!-- Left and right controls -->
-                                            <a class="carousel-control-prev" href="#gal-1" data-slide="prev">
-                                                <span class="carousel-control-prev-icon"></span>
-                                            </a>
-                                            <a class="carousel-control-next" href="#gal-1" data-slide="next">
-                                                <span class="carousel-control-next-icon"></span>
-                                            </a>
-                                        </div>
-                                    </div>
+                                            <!--&lt;!&ndash; Left and right controls &ndash;&gt;-->
+                                            <!--<a class="carousel-control-prev" href="#gal-1" data-slide="prev">-->
+                                                <!--<span class="carousel-control-prev-icon"></span>-->
+                                            <!--</a>-->
+                                            <!--<a class="carousel-control-next" href="#gal-1" data-slide="next">-->
+                                                <!--<span class="carousel-control-next-icon"></span>-->
+                                            <!--</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
 
-                                    <div class="img_details">
-                                        <div class="name_rating">
-                                            <h4 class="">{{menus[0]["name"]}}</h4>
-                                            <p class="htl_address">{{menus[0]["address"]}}</p>
-                                            <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                               {{menus[0]["city"]}}, {{menus[0]["state"]}}</a>
-                                            <p><span class="orange_text">₹ {{menus[0]["cost"]}}</span> per night</p>
-                                            <ul class="rating_star">
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                            </ul>
-                                            <span class="total_reviews">56</span>
-                                        </div>
-                                        <div class="booking">
-                                            <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                    <!--<div class="img_details">-->
+                                        <!--<div class="name_rating">-->
+                                            <!--<h4 class="">{{menus[0]["name"]}}</h4>-->
+                                            <!--<p class="htl_address">{{menus[0]["address"]}}</p>-->
+                                            <!--<a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>-->
+                                               <!--{{menus[0]["city"]}}, {{menus[0]["state"]}}</a>-->
+                                            <!--<p><span class="orange_text">₹ {{menus[0]["cost"]}}</span> per night</p>-->
+                                            <!--<ul class="rating_star">-->
+                                                <!--<li><i class="fa fa-star" aria-hidden="true"></i></li>-->
+                                                <!--<li><i class="fa fa-star" aria-hidden="true"></i></li>-->
+                                                <!--<li><i class="fa fa-star" aria-hidden="true"></i></li>-->
+                                                <!--<li><i class="fa fa-star" aria-hidden="true"></i></li>-->
+                                                <!--<li><i class="fa fa-star" aria-hidden="true"></i></li>-->
+                                            <!--</ul>-->
+                                            <!--<span class="total_reviews">56</span>-->
+                                        <!--</div>-->
+                                        <!--<div class="booking">-->
+                                            <!--<a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
 
-                            {% endfor %}
-                            <!-- ************** End each gall view **************-->
+                            <!--{% endfor %}-->
+                            <!--&lt;!&ndash; ************** End each gall view **************&ndash;&gt;-->
 
 
                         </div>
@@ -419,6 +419,7 @@
 
    <script type="text/javascript" src="/static/js/datepicker.js"></script>
     <script src="/static/js/project/tttscript.js"></script>
+    <!--<script src="/static/js/project/FilterPage.js"></script>-->
 </body>
 
 </html>
