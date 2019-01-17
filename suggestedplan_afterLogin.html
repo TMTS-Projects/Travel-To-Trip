@@ -1,0 +1,2284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/datepicker.css" rel="stylesheet" type="text/css">
+    <link type="text/css" href="static/css/tttstyle.css" rel="stylesheet">
+
+    <title>Hotels and Resorts</title>
+</head>
+
+<body>
+    <main>
+        <section class="head_section">
+            <div class="container-fluid">
+                <div class="row modify_search justify-content-between">
+                    <div class=" col col-md-3
+                    col-lg-2 in_logo">
+                    <a class="navbar-brand ttt_logo" href="index.html">
+                        <img src="static/img/travel_logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <div class="col-sm-auto auto_search_suggestion">
+                    <input type="search" placeholder="Type Search" />
+                </div>
+
+                <div class="col common_menu_list">
+                    <ul class="filt_menu_list">
+                        <li>
+                            <a href="#">Gift Cards</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                        <li class="user_id">
+                            <a href=""><span><img src="static/img/user1.jpg" /></span>
+                                Rachana</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="body_section gray_bg">
+            <div class="container-fluid">
+                <div class="row modify_filter">
+                    <div class="col-md-3 col-lg-2 filter_area">
+                        <div class="each_filt_section">
+                            <a class="sub_heading">Dates</a>
+                            <div class="dates_here">
+                                <label class="date_label">Check In</label>
+                                <input class="transparent_input" placeholder="Select Date">
+                            </div>
+                            <div class="dates_here">
+                                <label class="date_label">Check Out</label>
+                                <input class="transparent_input" placeholder="Select Date">
+                            </div>
+                        </div>
+
+                        <div class="each_filt_section">
+                            <a class="sub_heading" data-toggle="collapse" data-target="#collapse1" aria-expanded="false">Popular
+                                Filters<i class="fa fa-angle-down"></i></a>
+                            <div id="collapse1" class="collapse pricerange">
+                                <ul>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="collapse1_1" name="example1">
+                                            <label class="custom-control-label" for="collapse1_1">TTT Assured Hotels</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="collapse1_2" name="example1">
+                                            <label class="custom-control-label" for="collapse1_2">Couple Friendly
+                                                Hotels</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="collapse1_3" name="example1">
+                                            <label class="custom-control-label" for="collapse1_3">Free Cancellation</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="each_filt_section">
+                            <a class="sub_heading" data-toggle="collapse" data-target="#pricerange" aria-expanded="true">Price
+                                Range per night <i class="fa fa-angle-down"></i></a>
+                            <div id="pricerange" class="pricerange collapse show">
+                                <ul>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="prise1" name="example1">
+                                            <label class="custom-control-label" for="prise1">₹ 4,001 to ₹ 7,000</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="prise2" name="example1">
+                                            <label class="custom-control-label" for="prise2">₹ 7,001 to ₹ 10,000</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="prise3" name="example1">
+                                            <label class="custom-control-label" for="prise3">₹ 10,001 to ₹ 12,000</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="prise4" name="example1">
+                                            <label class="custom-control-label" for="prise4">₹ 12,001 to ₹ 15,000</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="prise5" name="example1">
+                                            <label class="custom-control-label" for="prise5">Above ₹ 15,000</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="each_filt_section">
+                            <a class="sub_heading" data-toggle="collapse" data-target="#location" aria-expanded="false">Location
+                                <i class="fa fa-angle-down"></i></a>
+                            <div id="location" class="collapse pricerange">
+                                <ul>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="location1" name="example1">
+                                            <label class="custom-control-label" for="location1">Silkboard</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="location2" name="example1">
+                                            <label class="custom-control-label" for="location2">BTM Layout</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="location3" name="example1">
+                                            <label class="custom-control-label" for="location3">Koramangala</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="location4" name="example1">
+                                            <label class="custom-control-label" for="location4">Richmond Road</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="location5" name="example1">
+                                            <label class="custom-control-label" for="location5">Bengaluru International
+                                                Airport Road</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="location6" name="example1">
+                                            <label class="custom-control-label" for="location6">Gandhi Nagar</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="location7" name="example1">
+                                            <label class="custom-control-label" for="location7">MG Road</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="location8" name="example1">
+                                            <label class="custom-control-label" for="location8">Mayan Circle</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="each_filt_section">
+                            <a class="sub_heading" data-toggle="collapse" data-target="#amenities" aria-expanded="false">Amenities
+                                <i class="fa fa-angle-down"></i></a>
+                            <div id="amenities" class="collapse pricerange">
+                                <ul>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="amenities1" name="example1">
+                                            <label class="custom-control-label" for="amenities1">Silkboard</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="amenities2" name="example1">
+                                            <label class="custom-control-label" for="amenities2">BTM Layout</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="amenities3" name="example1">
+                                            <label class="custom-control-label" for="amenities3">Central Air
+                                                Conditioning</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="amenities4" name="example1">
+                                            <label class="custom-control-label" for="amenities4">Airport transportation</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="amenities5" name="example1">
+                                            <label class="custom-control-label" for="amenities5">WIFI</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="amenities6" name="example1">
+                                            <label class="custom-control-label" for="amenities6">Laundry facilities</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="amenities7" name="example1">
+                                            <label class="custom-control-label" for="amenities7">ATM/banking</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="amenities8" name="example1">
+                                            <label class="custom-control-label" for="amenities8">Swimming pool</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="amenities9" name="example1">
+                                            <label class="custom-control-label" for="amenities9">Fitness Centre</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="each_filt_section">
+                            <a class="sub_heading" data-toggle="collapse" data-target="#user_rate1" aria-expanded="false">User
+                                Rating<i class="fa fa-angle-down"></i></a>
+                            <div id="user_rate1" class="collapse pricerange">
+                                <ul>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="userrate_1" name="example1">
+                                            <label class="custom-control-label" for="userrate_1">4.5 & Above
+                                                (Excellent)</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="userrate_2" name="example1">
+                                            <label class="custom-control-label" for="userrate_2">4 & Above (Very Good)</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="userrate_3" name="example1">
+                                            <label class="custom-control-label" for="userrate_3">3 & Above (Good)</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-9 offset-md-3 offset-lg-2 col-lg-10 filter_data">
+                        <div class="row gall_view">
+                            <div class="col-12 main_ttls p_left p_right">
+                                <a href="filterdata.html" class="more_dtls">
+                                    <h2>Best Places to visit</h2>
+                                    <span class="arr_row">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 451.846 451.847"
+                                            style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+                                            <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <!-- ************** Start each gall view **************-->
+                            <div class="text-center row full_width m_left m_right">
+                                <div class="col-sm-12 p_left p_right">
+                                    <div id="fourCarousel0" class="carousel fourCarousel slide">
+                                        <div class="carousel-inner sugg_place">
+                                            <div class="carousel-item active">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/tajmahal.jpeg">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <h4>Taj Mahal (Agra, India)</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/chirst.jpeg">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <h4>Christ the Redeemer Statue (Rio de Janeiro)</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/machu.jpeg">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <h4>Machu Picchu (Peru)</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/chinawall.jpeg">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <h4>Great Wall of China (China)</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/petra.jpg">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <h4>Petra (Jordan)</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/rome.jpeg">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <h4>The Roman Colosseum (Rome)</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/chichen.jpeg">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <h4>Chichen Itza (Yucatan Peninsula, Mexico)</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#fourCarousel0" role="button" data-slide="prev">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 451.846 451.847"
+                                                style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" />
+                                            </svg>
+                                        </a>
+                                        <a class="carousel-control-next" href="#fourCarousel0" role="button" data-slide="next">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 451.846 451.847"
+                                                style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ************** End each gall view **************-->
+
+                            <div class="col-12 main_ttls p_left p_right">
+                                <a href="filterdata.html" class="more_dtls">
+                                    <h2>Popular Hotels</h2>
+                                    <p>Checkout our Asia's popular hotels</p>
+                                    <span class="arr_row">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 451.846 451.847"
+                                            style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+                                            <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <!-- ************** Start each gall view **************-->
+                            <div class="text-center row m_left m_right">
+                                <div class="col-sm-12 p_left p_right">
+                                    <div id="fourCarousel1" class="carousel fourCarousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_1.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_2.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_3.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_4.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_5.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_6.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#fourCarousel1" role="button" data-slide="prev">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 451.846 451.847"
+                                                style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" />
+                                            </svg>
+                                        </a>
+                                        <a class="carousel-control-next" href="#fourCarousel1" role="button" data-slide="next">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 451.846 451.847"
+                                                style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ************** End each gall view **************-->
+
+                            <div class="col-12 main_ttls p_left p_right">
+                                <a href="filterdata.html" class="more_dtls">
+                                    <h2>High Rated Hotels</h2>
+                                    <p>Checkout our Asia's popular hotels</p>
+                                    <span class="arr_row">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 451.846 451.847"
+                                            style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+                                            <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                            <!-- ************** Start each gall view **************-->
+                            <div class="text-center row m_left m_right">
+                                <div class="col-sm-12 p_left p_right">
+                                    <div id="fourCarousel2" class="carousel fourCarousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_6.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_5.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_4.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_3.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_2.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="each_content col-3">
+                                                    <div class="single_img">
+                                                        <img src="static/img/htls_1.png">
+                                                    </div>
+                                                    <div class="img_details">
+                                                        <div class="name_rating">
+                                                            <h4 class="">Gangtok Hills in Peace</h4>
+                                                            <p class="htl_address">10th Cross, Wilsongarden, Bangalore
+                                                                - 5600036</p>
+                                                            <a href="" class="map_location">
+                                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                                Wilsongarden, Bangalore
+                                                            </a>
+                                                            <p><span class="orange_text">₹ 7,000</span> per night -
+                                                                FreeCancellation</p>
+                                                            <div class="ttt_rating">
+                                                                <ul class="rating_star">
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                                </ul>
+                                                                <span class="total_reviews">2451</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking">
+                                                            <a href="finalbooking.html" class="orange_btn_bor">Choose
+                                                                Room</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#fourCarousel2" role="button" data-slide="prev">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 451.846 451.847"
+                                                style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" />
+                                            </svg>
+                                        </a>
+                                        <a class="carousel-control-next" href="#fourCarousel2" role="button" data-slide="next">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 451.846 451.847"
+                                                style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744   L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284   c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ************** End each gall view **************-->
+
+
+                            <div class="row gall_view m_left m_right">
+                                <div class="col-12 main_ttls">
+                                    <h2>Hotels in Bangalore</h2>
+                                    <p>These are the best hotels in bangalore</p>
+                                </div>
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-1" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-1" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-1" data-slide-to="1"></li>
+                                                    <li data-target="#gal-1" data-slide-to="2"></li>
+                                                    <li data-target="#gal-1" data-slide-to="3"></li>
+                                                    <li data-target="#gal-1" data-slide-to="4"></li>
+                                                    <li data-target="#gal-1" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-1" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-1" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Diamond vally Hotel</h4>
+                                                <p class="htl_address">Koramangala, Opp. to SBI Bank, Bangalore -
+                                                    560071</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    Koramangala, Bangalore</a>
+                                                <p><span class="orange_text">₹ 12,851</span> per night</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">56</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-2" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-2" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-2" data-slide-to="1"></li>
+                                                    <li data-target="#gal-2" data-slide-to="2"></li>
+                                                    <li data-target="#gal-2" data-slide-to="3"></li>
+                                                    <li data-target="#gal-2" data-slide-to="4"></li>
+                                                    <li data-target="#gal-2" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-2" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-2" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Goldfinch Hotel Bangalore</h4>
+                                                <p class="htl_address">2nd Main, Gangothri circle, BTM Layout,
+                                                    Bangalore -
+                                                    560036</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    BTM Layout, Bangalore</a>
+                                                <p><span class="orange_text">₹ 4,000</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">245</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-3" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-3" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-3" data-slide-to="1"></li>
+                                                    <li data-target="#gal-3" data-slide-to="2"></li>
+                                                    <li data-target="#gal-3" data-slide-to="3"></li>
+                                                    <li data-target="#gal-3" data-slide-to="4"></li>
+                                                    <li data-target="#gal-3" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-3" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-3" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Paradise Hotel</h4>
+                                                <p class="htl_address">2nd Main, 3rd Cross, Indiranagar, Bangalore -
+                                                    560028</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    BTM Layout, Bangalore</a>
+                                                <p><span class="orange_text">₹ 5,671</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">8</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-4" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-4" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-4" data-slide-to="1"></li>
+                                                    <li data-target="#gal-4" data-slide-to="2"></li>
+                                                    <li data-target="#gal-4" data-slide-to="3"></li>
+                                                    <li data-target="#gal-4" data-slide-to="4"></li>
+                                                    <li data-target="#gal-4" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-4" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-4" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Goldfinch Hotel Bangalore</h4>
+                                                <p class="htl_address">2nd Main, Gangothri circle, BTM Layout,
+                                                    Bangalore -
+                                                    560071</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    BTM Layout, Bangalore</a>
+                                                <p><span class="orange_text">₹ 7,847</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">25</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-5" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-5" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-5" data-slide-to="1"></li>
+                                                    <li data-target="#gal-5" data-slide-to="2"></li>
+                                                    <li data-target="#gal-5" data-slide-to="3"></li>
+                                                    <li data-target="#gal-5" data-slide-to="4"></li>
+                                                    <li data-target="#gal-5" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-5" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-5" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Manshion House</h4>
+                                                <p class="htl_address">MG Road, Bangalore -
+                                                    560011</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    MG Road, Bangalore</a>
+                                                <p><span class="orange_text">₹ 4,957</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">1245</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-6" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-6" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-6" data-slide-to="1"></li>
+                                                    <li data-target="#gal-6" data-slide-to="2"></li>
+                                                    <li data-target="#gal-6" data-slide-to="3"></li>
+                                                    <li data-target="#gal-6" data-slide-to="4"></li>
+                                                    <li data-target="#gal-6" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-6" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-6" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Pride In the Mansion</h4>
+                                                <p class="htl_address">UB City, Bangalore -
+                                                    560001</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    UB City, Bangalore</a>
+                                                <p><span class="orange_text">₹ 9,856</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">8245</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-7" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-7" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-7" data-slide-to="1"></li>
+                                                    <li data-target="#gal-7" data-slide-to="2"></li>
+                                                    <li data-target="#gal-7" data-slide-to="3"></li>
+                                                    <li data-target="#gal-7" data-slide-to="4"></li>
+                                                    <li data-target="#gal-7" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-7" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-7" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Araku Vally Hotel</h4>
+                                                <p class="htl_address"> #71-124, Gangothri circle, Gandhi road, Vizag -
+                                                    5600036</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    Gandhi road, Vizag</a>
+                                                <p><span class="orange_text">₹ 9,999</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">5</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-8" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-8" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-8" data-slide-to="1"></li>
+                                                    <li data-target="#gal-8" data-slide-to="2"></li>
+                                                    <li data-target="#gal-8" data-slide-to="3"></li>
+                                                    <li data-target="#gal-8" data-slide-to="4"></li>
+                                                    <li data-target="#gal-8" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-8" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-8" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Gangtok Hills in Peace</h4>
+                                                <p class="htl_address">10th Cross, Wilsongarden, Bangalore -
+                                                    5600036</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    Wilsongarden, Bangalore</a>
+                                                <p><span class="orange_text">₹ 7,000</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">2451</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+                            </div>
+                            <div class="col-12">
+                                <a href="" class="font_18_sc see_all">See all hotels (2000+)</a>
+                            </div>
+
+
+                            <div class="row gall_view m_left m_right">
+                                <div class="col-12 main_ttls">
+                                    <h2>Hotels in Goa</h2>
+                                    <p>These are the best hotels in Goa</p>
+                                </div>
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-1" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-1" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-1" data-slide-to="1"></li>
+                                                    <li data-target="#gal-1" data-slide-to="2"></li>
+                                                    <li data-target="#gal-1" data-slide-to="3"></li>
+                                                    <li data-target="#gal-1" data-slide-to="4"></li>
+                                                    <li data-target="#gal-1" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-1" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-1" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Diamond vally Hotel</h4>
+                                                <p class="htl_address">Koramangala, Opp. to SBI Bank, Bangalore -
+                                                    560071</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    Koramangala, Bangalore</a>
+                                                <p><span class="orange_text">₹ 12,851</span> per night</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">56</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-2" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-2" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-2" data-slide-to="1"></li>
+                                                    <li data-target="#gal-2" data-slide-to="2"></li>
+                                                    <li data-target="#gal-2" data-slide-to="3"></li>
+                                                    <li data-target="#gal-2" data-slide-to="4"></li>
+                                                    <li data-target="#gal-2" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-2" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-2" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Goldfinch Hotel Bangalore</h4>
+                                                <p class="htl_address">2nd Main, Gangothri circle, BTM Layout,
+                                                    Bangalore -
+                                                    560036</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    BTM Layout, Bangalore</a>
+                                                <p><span class="orange_text">₹ 4,000</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">245</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-3" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-3" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-3" data-slide-to="1"></li>
+                                                    <li data-target="#gal-3" data-slide-to="2"></li>
+                                                    <li data-target="#gal-3" data-slide-to="3"></li>
+                                                    <li data-target="#gal-3" data-slide-to="4"></li>
+                                                    <li data-target="#gal-3" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-3" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-3" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Paradise Hotel</h4>
+                                                <p class="htl_address">2nd Main, 3rd Cross, Indiranagar, Bangalore -
+                                                    560028</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    BTM Layout, Bangalore</a>
+                                                <p><span class="orange_text">₹ 5,671</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">8</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-4" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-4" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-4" data-slide-to="1"></li>
+                                                    <li data-target="#gal-4" data-slide-to="2"></li>
+                                                    <li data-target="#gal-4" data-slide-to="3"></li>
+                                                    <li data-target="#gal-4" data-slide-to="4"></li>
+                                                    <li data-target="#gal-4" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-4" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-4" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Goldfinch Hotel Bangalore</h4>
+                                                <p class="htl_address">2nd Main, Gangothri circle, BTM Layout,
+                                                    Bangalore -
+                                                    560071</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    BTM Layout, Bangalore</a>
+                                                <p><span class="orange_text">₹ 7,847</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">25</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-5" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-5" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-5" data-slide-to="1"></li>
+                                                    <li data-target="#gal-5" data-slide-to="2"></li>
+                                                    <li data-target="#gal-5" data-slide-to="3"></li>
+                                                    <li data-target="#gal-5" data-slide-to="4"></li>
+                                                    <li data-target="#gal-5" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-5" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-5" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Manshion House</h4>
+                                                <p class="htl_address">MG Road, Bangalore -
+                                                    560011</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    MG Road, Bangalore</a>
+                                                <p><span class="orange_text">₹ 4,957</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">1245</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-6" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-6" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-6" data-slide-to="1"></li>
+                                                    <li data-target="#gal-6" data-slide-to="2"></li>
+                                                    <li data-target="#gal-6" data-slide-to="3"></li>
+                                                    <li data-target="#gal-6" data-slide-to="4"></li>
+                                                    <li data-target="#gal-6" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-6" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-6" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Pride In the Mansion</h4>
+                                                <p class="htl_address">UB City, Bangalore -
+                                                    560001</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    UB City, Bangalore</a>
+                                                <p><span class="orange_text">₹ 9,856</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">8245</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-7" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-7" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-7" data-slide-to="1"></li>
+                                                    <li data-target="#gal-7" data-slide-to="2"></li>
+                                                    <li data-target="#gal-7" data-slide-to="3"></li>
+                                                    <li data-target="#gal-7" data-slide-to="4"></li>
+                                                    <li data-target="#gal-7" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_3.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-7" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-7" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Araku Vally Hotel</h4>
+                                                <p class="htl_address"> #71-124, Gangothri circle, Gandhi road, Vizag -
+                                                    5600036</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    Gandhi road, Vizag</a>
+                                                <p><span class="orange_text">₹ 9,999</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">5</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+
+                                <!-- ************** Start each gall view **************-->
+                                <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
+                                    <div class="host_gall">
+                                        <div class="img_htls">
+                                            <div id="gal-8" class="carousel slide">
+                                                <!-- Indicators -->
+                                                <ul class="carousel-indicators">
+                                                    <li data-target="#gal-8" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#gal-8" data-slide-to="1"></li>
+                                                    <li data-target="#gal-8" data-slide-to="2"></li>
+                                                    <li data-target="#gal-8" data-slide-to="3"></li>
+                                                    <li data-target="#gal-8" data-slide-to="4"></li>
+                                                    <li data-target="#gal-8" data-slide-to="5"></li>
+                                                </ul>
+
+                                                <!-- The slideshow -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_1.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_2.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_4.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_5.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="htl_images">
+                                                            <img src="static/img/htls_6.png" alt="image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Left and right controls -->
+                                                <a class="carousel-control-prev" href="#gal-8" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#gal-8" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="img_details">
+                                            <div class="name_rating">
+                                                <h4 class="">Gangtok Hills in Peace</h4>
+                                                <p class="htl_address">10th Cross, Wilsongarden, Bangalore -
+                                                    5600036</p>
+                                                <a href="" class="map_location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    Wilsongarden, Bangalore</a>
+                                                <p><span class="orange_text">₹ 7,000</span> per night - Free
+                                                    Cancellation</p>
+                                                <ul class="rating_star">
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                </ul>
+                                                <span class="total_reviews">2451</span>
+                                            </div>
+                                            <div class="booking">
+                                                <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************** End each gall view **************-->
+                            </div>
+                            <div class="col-12">
+                                <a href="" class="font_18_sc see_all">See all hotels (2000+)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="static/js/datepicker.js"></script>
+    <script src="static/js/tttscript.js"></script>
+</body>
+
+</html>
