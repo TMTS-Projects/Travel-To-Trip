@@ -1,18 +1,19 @@
 {% extends "filterdata.html" %}
 {% block body %}
+
             {% for menus in details.menuList %}
                             <div class="col col-sm-6 col-md-4 col-lg-3 each_host_gall">
                                 <div class="host_gall">
                                     <div class="img_htls">
-                                        <div id="gal-1" class="carousel slide">
+                                        <div id='{{menus[0]["galId"]}}' class="carousel slide">
                                             <!-- Indicators -->
                                             <ul class="carousel-indicators">
-                                                <li data-target="#gal-1" data-slide-to="0" class="active"></li>
-                                                <li data-target="#gal-1" data-slide-to="1"></li>
-                                                <li data-target="#gal-1" data-slide-to="2"></li>
-                                                <li data-target="#gal-1" data-slide-to="3"></li>
-                                                <li data-target="#gal-1" data-slide-to="4"></li>
-                                                <li data-target="#gal-1" data-slide-to="5"></li>
+                                                <li data-target='#{{menus[0]["galId"]}}' data-slide-to="0" class="active"></li>
+                                                <li data-target='#{{menus[0]["galId"]}}' data-slide-to="1"></li>
+                                                <li data-target='#{{menus[0]["galId"]}}' data-slide-to="2"></li>
+                                                <li data-target='#{{menus[0]["galId"]}}' data-slide-to="3"></li>
+                                                <li data-target='#{{menus[0]["galId"]}}' data-slide-to="4"></li>
+                                                <li data-target='#{{menus[0]["galId"]}}' data-slide-to="5"></li>
                                             </ul>
 
                                             <!-- The slideshow -->
@@ -50,10 +51,10 @@
                                             </div>
 
                                             <!-- Left and right controls -->
-                                            <a class="carousel-control-prev" href="#gal-1" data-slide="prev">
+                                            <a class="carousel-control-prev" href='#{{menus[0]["galId"]}}' data-slide="prev">
                                                 <span class="carousel-control-prev-icon"></span>
                                             </a>
-                                            <a class="carousel-control-next" href="#gal-1" data-slide="next">
+                                            <a class="carousel-control-next" href='#{{menus[0]["galId"]}}' data-slide="next">
                                                 <span class="carousel-control-next-icon"></span>
                                             </a>
                                         </div>
@@ -76,7 +77,7 @@
                                             <span class="total_reviews">56</span>
                                         </div>
                                         <div class="booking">
-                                            <a href="finalbooking.html" class="orange_btn_bor">Choose Room</a>
+                                            <a onclick='send_confirmed_menu_id({{menus[0]["id"]}})' class="orange_btn_bor">Choose Room</a>
                                         </div>
                                     </div>
                                 </div>

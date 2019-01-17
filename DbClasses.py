@@ -17,6 +17,9 @@ class menus_Repository(Base):
     country = Column("country", String)
     pin_code = Column("pin_code", Integer)
     type_id = Column("type_id", Integer)
+    check_in_time = Column("check_in_time", String)
+    check_out_time = Column("check_out_time", String)
+    map = Column("map", String)
 
 class user_Repository(Base):
     __tablename__ = 'tbl_app_user_m'

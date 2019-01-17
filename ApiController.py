@@ -29,16 +29,17 @@ def searched_menu():
     create_session(key="input", value=SearchJson["input"])
     return "/SearchMark"
 
+
 #Searching for resorts and hotels
 @app.route('/SearchMark')
 def search_mark():
     result = MenuEngine.get_searched_menu(input=session["input"], typeId=session["menuId"])
-    create_session(key="city", value=result.menuList[0][0]['city'])
+    #create_session(key="city", value=result.menuList[0][0]['city'])
     response = json.dumps(result, default=lambda o: o.__dict__)
     if session["checkin"] != "NaN-aN-aN" and session["checkout"] != "NaN-aN-aN":
-        return render_template("filterdata.html", details=result,city=session["city"],checkin=session["checkin"],checkout=session["checkout"])
+        return render_template("filterPage.html", details=result,city=session["city"],checkin=session["checkin"],checkout=session["checkout"])
     elif session["checkin"] == "NaN-aN-aN" and session["checkout"] == "NaN-aN-aN":
-        return render_template("filterdata.html", details=result,city=session["city"],checkin='',checkout='')
+        return render_template("filterPage.html", details=result, city=" Chikmagalur", checkin='', checkout='')
 
 
 @app.route('/pressedMenus', methods=["POST"])
@@ -60,12 +61,27 @@ def get_menu_details():
     return response
 
 
-@app.route('/filteredMenus', methods=["POST"])
+@app.route('/filteredMenus', methods=['POST'])
 def get_filter_menu_list():
     FilterJson = request.get_json()
-    result = MenuEngine.filter_menu_list(typeId=session["menuId"],city=session["city"],fromValue=FilterJson["min"],toValue=FilterJson["max"])
-    response = json.dumps(result, default=lambda o: o.__dict__)
-    return response
+    result = MenuEngine.filter_menu_list(typeId=session["menuId"],city="Chikmagalur",fromValue=FilterJson["min"],toValue=FilterJson["max"])
+    return render_template("priceFilterPage.html", details=result, city="Chikmagalur", checkin=session["checkin"], checkout=session["checkout"])
+
+
+
+@app.route('/confirmedMenu', methods=["POST"])
+def confirmed_menu():
+    ConfirmJson = request.get_json()
+    create_session(key="confirm", value=ConfirmJson["id"])
+    return "/confirmedDetails"
+
+
+
+@app.route('/confirmedDetails')
+def get_confirmed_menu_list():
+    result = MenuEngine.get_single_menu_details(menuId=session["confirm"])
+    return render_template("finalbooking.html",details=result)
+
 
 
 @app.route('/travellors', methods=["POST"])
@@ -73,7 +89,6 @@ def travellors():
     jsonData = request.get_json()
     response = TravellorsEngine.insert_traveller_details(jsonData)
     return response
-
 
 @app.route('/bookings', methods=["POST"])
 def bookings():
